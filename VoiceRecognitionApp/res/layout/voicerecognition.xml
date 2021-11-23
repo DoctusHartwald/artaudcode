@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <Button android:text="TELEPHONE" android:id="@+id/tele" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+    <Button android:text="MAP" android:id="@+id/map" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+  <Button android:text="WAY" android:id="@+id/way" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+    <Button android:text="SMS" android:id="@+id/sms" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+  
+    <Button android:text="Speak NOW" android:id="@+id/btn_speak" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	
+	<Button android:text="Contact" android:id="@+id/contact" android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
+	
+	<ListView android:id="@+id/listSpeak" android:layout_height="wrap_content"
+		android:layout_width="fill_parent"></ListView>
+		
+		<ListView android:id="@+id/list_entry" android:layout_height="wrap_content"
+		android:layout_width="fill_parent"></ListView>
+		
+	
+</LinearLayout>

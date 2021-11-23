@@ -1,0 +1,4 @@
+#Tue Mar 10 16:49:17 CET 2009
+module-start-timeout=300000
+runtimes=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<runtimes>\r\n  <runtime id\="was.base.v61" id-set\="true" location\="c\:/Program Files/IBM/WebSphere/AppServer1" locked\="true" name\="WebSphere Application Server v6.1" runtime-type-id\="com.ibm.ws.ast.st.runtime.v61" stub\="false" test-environment\="true" timestamp\="0"/>\r\n</runtimes>\r\n
+eclipse.preferences.version=1

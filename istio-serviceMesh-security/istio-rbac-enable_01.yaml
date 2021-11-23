@@ -1,0 +1,49 @@
+# Description : rbac = role access base control
+# istio-rbac-enable.yaml
+# ---
+apiVersion: "config.istio.io/v1alpha2"
+kind: authorization
+metadata:
+  name: requestcontext
+  namespace: istio-system
+spec:
+  subject:
+    user: source.user | ""
+    groups: ""
+    properties:
+    app: source.labels["apps"] | ""
+    version: source.labels["version"] | ""
+    namespace: source.namespace | ""
+  action:
+  namespace: destination.namespace | ""
+  service: destination.service | ""
+  method: request.method | ""
+  path: request.path | ""
+  properties:
+    app: destinaton.labels["app"] | ""
+    version: destination.labels["version"] | ""
+
+# config se passe ici :)
+# ---
+apiVersion: "config.istio.io/v1alpha2"
+kind: rbac
+metadata:
+   name: handler
+   namespace: istio-system
+spec:
+   config_store_url: "k8://"
+
+# ---
+apiVersion: "config.istio.io/v1alpha2"
+kind: rule
+metadata:
+  name: rbaccheck
+  namespace: istio-system
+#on force rbac sur le namespace=default
+spec:
+  match: destination.namespace == "default"
+  actions:
+  - handler: handler.rbac
+    instances: 
+    - requestcontext.authorization
+# ---

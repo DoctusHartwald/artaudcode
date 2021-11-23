@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns="http://castor.exolab.org/" xmlns:cst="http://castor.exolab.org/">
+    <description xmlns="">Castor generated mapping file</description>
+    <class name="com.castor.orderItem.Item">
+        <description xmlns="">Default mapping for class com.castor.orderItem.Item</description>
+        <map-to/>
+        <field name="_quantity" type="int">
+            <bind-xml name="_quantity" node="attribute"/>
+        </field>
+        <field name="_unitPrice" type="float">
+            <bind-xml name="_unit-price" node="attribute"/>
+        </field>
+        <field name="_reference" type="java.lang.String">
+            <bind-xml name="_reference" node="element"/>
+        </field>
+        <field name="_description" type="java.lang.String">
+            <bind-xml name="_description" node="element"/>
+        </field>
+    </class>
+    <class name="com.castor.orderItem.MyOrder">
+        <description xmlns="">Default mapping for class com.castor.orderItem.MyOrder</description>
+        <map-to/>
+        <field name="totalPrice" type="float">
+            <bind-xml name="total-price" node="attribute"/>
+        </field>
+        <field name="total" type="float">
+            <bind-xml name="total" node="attribute"/>
+        </field>
+        <field name="reference" type="java.lang.String">
+            <bind-xml name="reference" node="element"/>
+        </field>
+        <field name="clientData" type="com.castor.orderItem.ClientData">
+            <bind-xml name="client-data" node="element"/>
+        </field>
+        <field name="itemsList" type="java.lang.Object" collection="vector">
+            <bind-xml name="items-list" node="element"/>
+        </field>
+    </class>
+    <class name="com.castor.orderItem.ClientData">
+        <description xmlns="">Default mapping for class com.castor.orderItem.ClientData</description>
+        <map-to/>
+        <field name="address" type="java.lang.String">
+            <bind-xml name="address" node="element"/>
+        </field>
+        <field name="name" type="java.lang.String">
+            <bind-xml name="name" node="element"/>
+        </field>
+    </class>
+</mapping>

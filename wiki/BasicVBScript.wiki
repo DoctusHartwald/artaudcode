@@ -1,0 +1,55 @@
+#summary One-sentence summary of this page.
+#labels Phase-QA
+
+= Introduction =
+
+this a basic example of VBscript :D 
+
+
+= CODE =
+
+'sub a la difference de Functino en VBScript contient un type return
+ Sub ConvertTemp()
+     temp = InputBox("Veuillez entrer la température en degrés F.", 1)
+     MsgBox "La température est de " & Celsius(temp) & " degrés C."
+ End Sub
+
+ Function Celsius(degresF)
+     Celsius = (degresF - 32) * 5 / 9
+ End Function
+
+
+' exmple de fonction basique
+Function FrancEuro(prix)
+ FrancEuro = prix / 6.55957
+ MsgBox FrancEuro
+End Function
+
+Dim nom    ' exemple variable
+nom="Antoine"
+Heure ="Il est " & Hour(Now) & "h et " & Minute(Now) & " min."
+
+'exemple de if instruction
+if nom  = "Antoine" then
+nom = "alex"
+end if
+
+'exemple de boucle
+For i = 1 To 2
+
+'MsgBox i
+
+Next
+
+
+if Hour(Now)<=18 then
+Message="Bonjour"
+else
+Message= "Bonsoir"
+end if
+'Affichage de heure
+MsgBox nom &"et le" &  Message & "!" & vbnewline & Heure
+
+ConvertTemp()
+FrancEuro(12)
+wscript.echo "coucou"

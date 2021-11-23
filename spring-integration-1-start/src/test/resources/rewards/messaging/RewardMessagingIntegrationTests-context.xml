@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:si="http://www.springframework.org/schema/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/integration
+            http://www.springframework.org/schema/integration/spring-integration-1.0.xsd">
+
+
+	<import
+		resource="classpath:/rewards/messaging/spring-integration-idempotent-receiver-config.xml" />
+	<import
+		resource="classpath:/rewards/messaging/spring-integration-infrastructure-config.xml" />
+	<import
+		resource="classpath:/rewards/messaging/spring-integration-marshalling-config.xml" />
+
+	<import resource="classpath:/system-test-config.xml" />
+
+</beans>

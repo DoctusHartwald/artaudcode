@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:amq="http://activemq.apache.org/schema/core"
+	xmlns:util="http://www.springframework.org/schema/util"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd
+						http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                         http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.1.xsd
+                        http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+                        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+                        ">
+
+
+	<bean id="customlog" class="org.aop.CustomLogger"></bean>
+	
+	
+	<bean id="traceAdviceAspect" class="org.aop.SysoutAspect" />
+
+	<bean id="traceAdvice" class="org.aop.SysoutInterceptor" />
+	
+<aop:aspectj-autoproxy> </aop:aspectj-autoproxy>  
+	
+
+
+	
+  
+
+
+
+	<!--	Debut de la configuration AOP 
+	<aop:config>
+		<aop:pointcut id="servicePointcut" expression="execution(* org.service..*.*(..))" />
+		<aop:aspect id="loggingAspect" ref="monLogger">
+			<aop:before method="logMethodEntry" pointcut-ref="servicePointcut" />
+			<aop:after-returning method="logMethodExit"
+				returning="result" pointcut-ref="servicePointcut" />
+		</aop:aspect>
+	</aop:config>
+	-->
+
+
+	<!-- 1) USE ANNOTATIONS TO CONFIGURE SPRING BEANS -->
+	<context:component-scan base-package="org" />
+
+
+</beans>
+				

@@ -1,0 +1,49 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fmt="http://java.sun.com/jsp/jstl/fmt" xmlns:form="http://www.springframework.org/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:output omit-xml-declaration="yes"/>
+    <script type="text/javascript">dojo.require('dijit.TitlePane');</script>
+    <div id="_title_div">
+        <spring:message code="label.pizzaorder" var="entity_label"/>
+        <spring:message arguments="${entity_label}" code="entity.show" var="title_msg"/>
+        <script type="text/javascript">Spring.addDecoration(new Spring.ElementDecoration({elementId : '_title_div', widgetType : 'dijit.TitlePane', widgetAttrs : {title: '${title_msg}'}})); </script>
+        <c:if test="${not empty pizzaOrder}">
+            <div id="roo_pizzaOrder_name">
+                <label for="_name_id">Name:</label>
+                <div class="box" id="_name_id">
+                    <c:out value="${pizzaOrder.name}"/>
+                </div>
+            </div>
+            <br/>
+            <div id="roo_pizzaOrder_address">
+                <label for="_address_id">Address:</label>
+                <div class="box" id="_address_id">
+                    <c:out value="${pizzaOrder.address}"/>
+                </div>
+            </div>
+            <br/>
+            <div id="roo_pizzaOrder_deliveryDate">
+                <label for="_deliveryDate_id">Delivery Date:</label>
+                <div class="box" id="_deliveryDate_id">
+                    <fmt:formatDate pattern="${pizzaOrder_deliveryDate_date_format}" value="${pizzaOrder.deliveryDate}"/>
+                </div>
+            </div>
+            <br/>
+            <div id="roo_pizzaOrder_pizzas">
+                <label for="_pizzas_id">Pizzas:</label>
+                <div class="box" id="_pizzas_id">
+                    <c:out value="${pizzaOrder.pizzas}"/>
+                </div>
+            </div>
+            <br/>
+            <div id="roo_pizzaOrder_total">
+                <label for="_total_id">Total:</label>
+                <div class="box" id="_total_id">
+                    <c:out value="${pizzaOrder.total}"/>
+                </div>
+            </div>
+            <br/>
+        </c:if>
+        <c:if test="${empty pizzaOrder}">
+            <spring:message arguments="${entity_label}" code="entity.not.found.single"/>
+        </c:if>
+    </div>
+</div>

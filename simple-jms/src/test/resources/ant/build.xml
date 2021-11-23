@@ -1,0 +1,7 @@
+<project name="EAM" basedir=".">
+	<target name="Copy">
+		  <copy file="${basedir}/../jms/bootstrap.properties"
+		  	todir="${basedir}"/>
+	</target>
+
+</project>

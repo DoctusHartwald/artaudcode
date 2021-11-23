@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry path="ejbModule" kind="src"/>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/vm.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/core.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/charsets.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/graphics.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/security.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ibmpkcs.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ibmorb.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ibmcfw.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ibmorbapi.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ibmjcefw.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ibmjgssprovider.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ibmjsseprovider2.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ibmjaaslm.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ibmjaasactivelm.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ibmcertpathprovider.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/server.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry rootpath="src" path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/xml.jar" kind="lib" sourcepath="C:/Program Files/IBM/WebSphere/AppServer1/java/src.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/CmpCrmf.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/dtfj-interface.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/dtfj.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/gskikm.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/ibmcmsprovider.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/ibmjcefips.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/ibmjceprovider.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/ibmkeycert.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/IBMKeyManagementServer.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/ibmpkcs11.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/ibmpkcs11impl.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/ibmsaslprovider.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/ibmspnego.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/indicim.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/iwsorbutil.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/jaccess.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/JawBridge.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/jdmpview.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/jre/lib/ext/PD.jar" kind="lib">
+		<attributes>
+			<attribute name="javadoc_location" value="http://java.sun.com/j2se/1.5.0/docs/api/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry path="ImportedClasses" kind="lib" exported="true"/>
+	<classpathentry path="D:/Documents and Settings/anartaud/.m2/repository/org/apache/geronimo/specs/geronimo-j2ee_1.4_spec/1.0/geronimo-j2ee_1.4_spec-1.0.jar" kind="lib"/>
+	<classpathentry path="D:/Documents and Settings/anartaud/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar" kind="lib"/>
+	<classpathentry path="D:/Documents and Settings/anartaud/.m2/repository/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar" kind="lib"/>
+	<classpathentry path="D:/project_EJB2.websphere/ejb/target/classes" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/deploytool/itp/batchboot.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.cds_1.0.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.events.client_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.events.service_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.uddi_1.0.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.bootstrap_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.debug.osgi_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.ejbportable_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.emf_2.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.esi_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.jdt.core_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.migration_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.portletcontainer.ext_2.0.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.portletcontainer_2.0.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.proxy.admin_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.proxy_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.runtime.coregroupbridge_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.runtime.dist_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.runtime.gateway_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.runtime_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.security.crypto_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.sib.server_2.0.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.sib.utils_2.0.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.sib.wccm_2.0.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.sip.container_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.sip.proxy_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.wccm.compatibility_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.wccm_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.webcontainer_2.0.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.ws.webui_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.wsspi.extension_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.wsspi.proxy.extension_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/com.ibm.wsspi.rrd_6.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/org.eclipse.ant.core_3.1.1.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/org.eclipse.core.resources_3.1.2.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/org.eclipse.core.runtime.compatibility_3.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/org.eclipse.core.runtime_3.1.2.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/org.eclipse.core.variables_3.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/org.eclipse.jdt.core_3.1.2.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/org.eclipse.osgi_3.1.2.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/org.eclipse.team.core_3.1.1.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/org.eclipse.text_3.1.1.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/plugins/org.eclipse.update.configurator_3.1.0.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/lib/dt.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/lib/htmlconverter.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/lib/jardiff.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/lib/jnlp-servlet.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/lib/jnlp.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/java/lib/tools.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/activation-impl.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/aspectjrt.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/base.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/bootstrap.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/bsf-engines.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/commandlineutils.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/EJBCommandTarget.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/htmlshell.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/installver.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/installxml.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/iscdeploy.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/ivblogbr.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/IVTClient.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/j2ee.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/jacl.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/launchclient.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/lmproxy.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/mail-impl.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/marshall.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/nif.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/pc-appext.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/physicalrep.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/pmirm4arm.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/rrd-appext.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/rsadbutils.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/rsahelpers.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/serviceadapter.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/sljc.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/spy-sl.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/spy.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/sqlserver.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/startup.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/tcljava.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/urlprotocols.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/util.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/wsatlib.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/lib/wsif-compatb.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime/batch.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime/ejbdeploy.jar" kind="lib"/>
+	<classpathentry path="C:/Program Files/IBM/WebSphere/AppServer1/deploytool/itp/plugins/com.ibm.etools.ejbdeploy/runtime/ejbmapvalidate.jar" kind="lib"/>
+	<classpathentry path="build/classes" kind="output"/>
+</classpath>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:int="http://www.springframework.org/schema/integration"
+	xmlns:int-file="http://www.springframework.org/schema/integration/file"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:int-ext="http://www.springframework.org/schema/integration/integration-service-extender"
+	xmlns:int-stream="http://www.springframework.org/schema/integration/stream"
+	xmlns:int-xml="http://www.springframework.org/schema/integration/xml"
+	xsi:schemaLocation="http://www.springframework.org/schema/integration/xml http://www.springframework.org/schema/integration/xml/spring-integration-xml-2.0.xsd
+		http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-2.0.xsd
+		http://www.springframework.org/schema/integration/file http://www.springframework.org/schema/integration/file/spring-integration-file-2.0.xsd
+		http://www.springframework.org/schema/integration/stream http://www.springframework.org/schema/integration/stream/spring-integration-stream-1.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+		http://www.springframework.org/schema/integration/integration-service-extender http://www.springframework.org/schema/integration/integration-service-extender/spring-integration-service-extender-1.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+
+	<!--
+		welcomeProcessor (gateway) -> input (direct channel) ->
+		service-activator (on welcome calling decorateMessage) -> output
+		(channel with queue) output2 stream
+	-->
+
+
+	<!--
+		input message decorate the message send it to console
+	-->
+	<int:channel id="input" />
+	<int:transformer input-channel="input" output-channel="console"
+		method="decorateMessage">
+		<bean id="welcome" class="message.MessageWelcome" />
+	</int:transformer>
+	<int-stream:stdout-channel-adapter
+		id="console" />
+
+
+	<!--
+		receive message.IMessageExchanger un flux entree de
+		default-request-channel
+	-->
+	<int:gateway id="diningProcessor" service-interface="message.IMessageExchanger"
+		default-request-channel="inputExterieur" />
+
+	<int:channel id="inputExterieur">
+		<int:queue capacity="10" />
+	</int:channel>
+
+
+
+
+
+
+	<!--
+		<int:service-activator input-channel="input" output-channel="output"
+		ref="welcome" method="decorateMessage" >
+	-->
+	<!--		 <pooler> scan the input channel pooler /> -->
+	<!--	</int:service-activator>-->
+
+
+
+
+</beans>

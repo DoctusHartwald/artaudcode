@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<diningRequests xmlns="http://www.springsource.com/dining-requests">
+    <dining>
+        <amount value="100.00"/>
+        <creditcard number="1234123412341234"/>
+        <merchant number="1234567890"/>
+        <timestamp>
+            <date>2009-04-25</date>
+            <time>00:00:00.000</time>
+        </timestamp>
+    </dining>
+    <dining>
+        <amount value="150.00"/>
+        <creditcard number="1234123412341235"/>
+        <merchant number="1234567891"/>
+        <timestamp>
+            <date>2009-04-26</date>
+            <time>00:00:00.000</time>
+        </timestamp>
+    </dining>
+</diningRequests>

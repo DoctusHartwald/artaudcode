@@ -1,0 +1,90 @@
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" id="menu" version="2.0">
+	<jsp:output omit-xml-declaration="yes"/>
+	<ul id="roo_menu">
+			
+	<li id="web_mvc_jsp_topping_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_topping_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_topping_menu_item">
+                    <spring:url value="/topping/form" var="web_mvc_jsp_create_topping_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_topping_menu_item_url}">
+                        <spring:message code="label.topping" var="label_topping"/>
+                        <spring:message arguments="${label_topping}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_topping_menu_item">
+                    <spring:url value="/topping?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_topping_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_topping_menu_item_url}">
+                        <spring:message code="label.toppings" var="label_toppings"/>
+                        <spring:message arguments="${label_toppings}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_base_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_base_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_base_menu_item">
+                    <spring:url value="/base/form" var="web_mvc_jsp_create_base_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_base_menu_item_url}">
+                        <spring:message code="label.base" var="label_base"/>
+                        <spring:message arguments="${label_base}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_base_menu_item">
+                    <spring:url value="/base?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_base_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_base_menu_item_url}">
+                        <spring:message code="label.bases" var="label_bases"/>
+                        <spring:message arguments="${label_bases}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_pizza_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_pizza_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_pizza_menu_item">
+                    <spring:url value="/pizza/form" var="web_mvc_jsp_create_pizza_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_pizza_menu_item_url}">
+                        <spring:message code="label.pizza" var="label_pizza"/>
+                        <spring:message arguments="${label_pizza}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_pizza_menu_item">
+                    <spring:url value="/pizza?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_pizza_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_pizza_menu_item_url}">
+                        <spring:message code="label.pizzas" var="label_pizzas"/>
+                        <spring:message arguments="${label_pizzas}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    <li id="web_mvc_jsp_pizzaorder_category">
+            <h2>
+                <spring:message code="menu.category.web_mvc_jsp_pizzaorder_category.label"/>
+            </h2>
+            <ul>
+                <li id="web_mvc_jsp_create_pizzaorder_menu_item">
+                    <spring:url value="/pizzaorder/form" var="web_mvc_jsp_create_pizzaorder_menu_item_url"/>
+                    <a href="${web_mvc_jsp_create_pizzaorder_menu_item_url}">
+                        <spring:message code="label.pizzaorder" var="label_pizzaorder"/>
+                        <spring:message arguments="${label_pizzaorder}" code="global.menu.new"/>
+                    </a>
+                </li>
+            <li id="web_mvc_jsp_list_pizzaorder_menu_item">
+                    <spring:url value="/pizzaorder?page=${empty param.page ? 1 : param.page}&amp;amp;size=${empty param.size ? 10 : param.size}" var="web_mvc_jsp_list_pizzaorder_menu_item_url"/>
+                    <a href="${web_mvc_jsp_list_pizzaorder_menu_item_url}">
+                        <spring:message code="label.pizzaorders" var="label_pizzaorders"/>
+                        <spring:message arguments="${label_pizzaorders}" code="global.menu.list"/>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

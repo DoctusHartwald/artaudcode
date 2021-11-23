@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="rewardNetwork" class="rewards.ws.security.client.SecureSoapRewardNetwork">
+    	<property name="webServiceTemplate" ref="webServiceTemplate"/>
+    </bean>
+    
+	<bean id="webServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate">
+		<property name="defaultUri" value="http://localhost:8080/ws-security-1/rewards"/>
+		<property name="interceptors">
+			<bean class="org.springframework.ws.soap.security.xwss.XwsSecurityInterceptor">
+				<property name="policyConfiguration" value="classpath:rewards/ws/security/client/client-policy.xml"/>
+				<property name="callbackHandler" ref="keystoreCallbackHandler"/>
+			</bean>
+		</property>
+	</bean>
+		
+    <bean id="keystoreCallbackHandler" class="org.springframework.ws.soap.security.xwss.callback.KeyStoreCallbackHandler">
+    	<property name="keyStore">
+		    <bean class="org.springframework.ws.soap.security.support.KeyStoreFactoryBean">
+		        <property name="location" value="classpath:rewards/ws/security/client/client-store.jks"/>
+		        <property name="password" value="client"/>
+		    </bean>
+    	</property>
+    	<property name="defaultAlias" value="client"/>
+    	<property name="privateKeyPassword" value="client"/>
+    </bean>
+    
+</beans>

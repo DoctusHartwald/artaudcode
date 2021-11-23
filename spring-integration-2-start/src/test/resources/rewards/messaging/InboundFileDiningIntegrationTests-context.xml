@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:si="http://www.springframework.org/schema/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:file="http://www.springframework.org/schema/integration/file"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/integration
+            http://www.springframework.org/schema/integration/spring-integration-1.0.xsd
+            http://www.springframework.org/schema/integration/file
+            http://www.springframework.org/schema/integration/file/spring-integration-file-1.0.xsd">
+
+	<import resource="classpath:/rewards/messaging/RewardMessagingIntegrationTests-context.xml" />
+
+	<!-- TODO: add an inbound File Channel Adapter
+			   the directory should be 'src/test/resources/rewards/messaging'
+			   and the filename-pattern should be: dining.*\.xml
+	 -->
+
+	<!-- TODO: add a file-to-string-transformer -->
+
+</beans>

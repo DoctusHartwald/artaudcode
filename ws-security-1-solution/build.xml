@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<project name="ws-security-1-solution">
+
+	<property name="client.dir" value="${basedir}/src/main/resources/rewards/ws/security/client" />
+	<property name="client.keystore" value="${client.dir}/client-store.jks" />
+	<property name="client.password" value="client" />
+	<property name="client.certificate" value="${basedir}/client.cer" />
+
+	<property name="server.dir" value="${basedir}/src/main/webapp/WEB-INF/xwss" />
+	<property name="server.keystore" value="${server.dir}/server-store.jks" />
+	<property name="server.password" value="server" />
+
+	<target name="create-client-certificate" description="Creates the client-side certificate">
+		<delete file="${client.keystore}" />
+		<mkdir dir="${client.dir}" />
+		<genkey alias="client" storepass="${client.password}" keystore="${client.keystore}" keyalg="RSA"
+			dname="CN=Keith and Keri Donald, OU=Training, O=SpringSource, C=US"
+			validity="730"/>
+	</target>
+		
+	<target name="export-client-certificate" description="Exports the client certificate">
+		<exec executable="keytool" dir="${java.home}/bin">
+			<arg value="-export" />
+			<arg value="-keystore" />
+			<arg file="${client.keystore}" />
+			<arg line="-storepass ${client.password}" />
+			<arg line="-alias client" />
+			<arg value="-file" />
+			<arg file="${client.certificate}" />
+		</exec>
+	</target>
+
+	<target name="list-client-certificates">
+		<exec executable="keytool" dir="${java.home}/bin">
+			<arg value="-list" />
+			<arg value="-v" />
+			<arg value="-keystore" />
+			<arg file="${client.keystore}" />
+			<arg line="-storepass ${client.password}" />
+		</exec>
+	</target>
+
+	<target name="create-server-certificate">
+		<delete file="${server.keystore}" />
+		<mkdir dir="${server.dir}" />
+		<genkey alias="server" storepass="${server.password}" keystore="${server.keystore}" keyalg="RSA"
+			dname="CN=SOAP Service, O=Rewards Network, C=US"
+			validity="730"/>
+	</target>
+
+	<target name="import-client-certificate">
+		<exec executable="keytool" dir="${java.home}/bin">
+			<arg value="-import" />
+			<arg value="-keystore" />
+			<arg file="${server.keystore}" />
+			<arg line="-storepass ${server.password}" />
+			<arg line="-alias client" />
+			<arg line="-noprompt" />
+			<arg value="-file" />
+			<arg file="${client.certificate}" />
+		</exec>
+	</target>
+
+	<target name="list-server-certificate">
+		<exec executable="keytool" dir="${java.home}/bin">
+			<arg value="-list" />
+			<arg value="-v" />
+			<arg value="-keystore" />
+			<arg file="${server.keystore}" />
+			<arg line="-storepass ${server.password}" />
+		</exec>
+	</target>
+
+
+
+</project>

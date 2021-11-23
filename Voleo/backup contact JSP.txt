@@ -1,0 +1,192 @@
+
+ 
+ <!-- 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="<s:url value="/images/styles.css"/>" rel="stylesheet"
+	type="text/css" />
+<title>Contacts</title>
+</head>
+<body>
+<!--  
+
+Liste de Vos Contacts:<br>
+<s:iterator value="contacts">
+	<s:property value="firstname" /> 
+	<s:property value="lastname" /> 
+	<s:property value="email" /> 
+	<s:property value="fixPhone" /> 
+	<s:property value="mobilePhone" />
+	
+	<s:url id="update" action="updateContactForm">
+	<s:param name="contactId" value="id" />
+	</s:url>
+	<s:a href="%{update}"> Actualiser </s:a>
+	
+	<s:url id="delete" action="deleteContact">
+	<s:param name="contactIdDelete" value="id" />
+	</s:url>
+	<s:a href="%{delete}"> Supprimer </s:a>
+	<br />
+</s:iterator>
+
+<br>
+<s:a href="addContactForm.action">Ajouter un contact</s:a>
+<br>
+<s:a href="updateUserForm.action">Modifier Mon Compte</s:a>
+<br>
+<s:a href="listTypes.action">Mes Documents</s:a>
+<br><br>
+<s:a href="listAllDocuments.action">Autres Documents</s:a>
+
+
+<div id="header">header</div>
+<div class="content">
+<div id="titre"><a name="ObjectifduSite"></a>
+<h2>Mes contacts</h2>
+<fieldset><legend align=top> Mes Documents </legend>
+<table>
+<td><img src="<s:url value="images/plus.png" />" width="32"
+				height="32" alt="add contact" />
+			<s:a href="addContactForm.action">Ajouter Contact
+			</s:a>
+</td>
+<td><img src="<s:url value="/images/update.png" />" width="32"
+				height="32" alt="add contact" />
+			<s:a href="updateUserForm.action">Modifier Mon Compte</s:a>
+</td>
+<td><img src="<s:url value="/images/documents.png" />" width="32"
+				height="32" alt="Mes docs" />
+			  <s:a href="listTypes.action">Mes Documents</s:a>
+</td>
+<td><img src="<s:url value="/images/reload_all_tabs.png" />" width="32"
+				height="32" alt="autres docs" />
+			  <s:a href="listAllDocuments.action">Autres Documents</s:a>
+</td>
+
+<td><img src="<s:url value="/images/export.gif" />" width="32"
+			height="32" alt="export CVS" />Export Contact
+</td>
+
+
+<s:iterator value="contacts">
+
+	<tr>
+		<td>		<s:property value="firstname" /> 
+					<s:property value="lastname" /> 
+					<s:property value="email" /> 
+					<s:property value="fixPhone" /> 
+					<s:property value="mobilePhone" />
+		</td>
+		<td><img src="<s:url value="/images/update.png" />" width="32"
+			height="32" alt="update contact" />
+			<s:url id="update" action="updateContactForm">
+	<s:param name="contactId" value="id" />
+	</s:url>
+			<s:a href="%{update}">
+				Actualiser Contact
+			</s:a>
+		</td>
+		
+		<td><img src="<s:url value="/images/remove.gif" />" width="32"
+			height="32" alt="remove contact" />
+				<s:url id="delete" action="deleteContact">
+	<s:param name="contactIdDelete" value="id" />
+	</s:url>
+			
+			<s:a href="%{delete}">
+				Supprimer Contact
+			</s:a>
+		</td>
+	
+	</tr>
+	
+</s:iterator>	
+<br><br>
+
+
+</table>
+</fieldset>
+
+
+<div id="menu2">
+<ul>
+	<li><a href="#">All Contact</a></li>
+	<li id="current"><a href="#">Friends</a></li>
+	<li><a href="#">Family</a></li>
+	<li><a href="#">Radio division</a></li>
+	<li><a href="#">IG division</a></li>
+
+</ul>
+<br />
+<br />
+
+<pre>En leur présentant des mini-conférences, alternant
+ démonstrations de projets et théorie, sur les thèmes : Images et Espace, Informatique et Sécurité, Robotique et Traitement des signaux. Ces conférences seront présentées par des élèves, des professeurs, des chercheurs et des ingénieurs qui souhaitent faire partager leurs passions. Elles offrent ainsi un contact direct avec des spécialistes en la matière.(=>Vs trouvrez ci-joint la documention nécessaire dans le menu)
+</pre></div>
+
+
+</div>
+</div>
+<br>
+
+
+</body>
+</html>
+
+
+
+-->
+
+
+
+
+
+
+
+<!--  
+
+<div id="header">header</div>
+<div class="content">
+<div id="titre"><a name="ObjectifduSite"></a>
+<h2>Mes contacts</h2>
+
+<form method="post" width="100" height="200">
+
+Liste de Vos Contacts:<br>
+<s:iterator value="contacts">
+	<th width='220'><s:property value="firstname" /> 
+					<s:property value="lastname" /> 
+					<s:property value="email" /> 
+					<s:property value="fixPhone" /> 
+					<s:property value="mobilePhone" />
+	</th>
+	
+	<th width='220'>
+	<s:url id="update" action="updateContactForm">
+	<s:param name="contactId" value="id" />
+	</s:url>
+	<s:a href="%{update}"> Actualiser </s:a>
+	</th>
+	
+	<th width='220'>
+	<s:url id="delete" action="deleteContact">
+	<s:param name="contactIdDelete" value="id" />
+	</s:url>
+	<s:a href="%{delete}"> Supprimer </s:a>
+	</th>
+	<br />
+</s:iterator>
+</form>
+
+
+-->
+
+
+
+
+
+

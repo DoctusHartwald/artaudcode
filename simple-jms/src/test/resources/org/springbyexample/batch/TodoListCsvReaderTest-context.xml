@@ -1,0 +1,48 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:batch="http://www.springframework.org/schema/batch"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.0.xsd">
+
+    <bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+        <property name="jobRepository" ref="jobRepository" />
+    </bean>
+
+    <bean id="jobRepository" class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
+        <property name="transactionManager" ref="transactionManager" />
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.batch.support.transaction.ResourcelessTransactionManager" />
+
+    <batch:job id="todoListsCsvReadJob">
+        <batch:step id="importTodoLists">
+            <batch:tasklet>
+                <batch:chunk reader="todoListFileItemReader" writer="todoListItemWriter" commit-interval="2" />
+            </batch:tasklet>
+        </batch:step>
+    </batch:job>
+
+    <bean id="todoListFileItemReader" class="org.springframework.batch.item.file.FlatFileItemReader">
+        <property name="resource"
+            value="classpath:org/springframework/batch/todolists.csv" />
+        <property name="lineMapper">
+            <bean class="org.springframework.batch.item.file.mapping.DefaultLineMapper">
+                <property name="lineTokenizer">
+                    <bean
+                        class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
+                        <property name="names"
+                            value="id,name,rssAllowed,lastUpdate" />
+                    </bean>
+                </property>
+                <property name="fieldSetMapper">
+                    <bean
+                        class="org.springbyexample.batch.TodoListFieldSetMapper" />
+                </property>
+            </bean>
+        </property>
+    </bean>
+
+    <bean id="todoListItemWriter" class="org.springbyexample.batch.AddToCollectionTodoListWriter" />
+
+</beans>

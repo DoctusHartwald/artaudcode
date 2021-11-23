@@ -1,0 +1,135 @@
+
+
+    
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Contacts</title>
+
+  <script src="js/jquery.js"></script>
+
+  <script src="js/jquery.dimensions.js"></script>  
+  <script src="js/jquery.templating.js"></script>
+  <script src="js/jquery.ui.autocomplete.ext.js"></script>
+  <script src="js/jquery.ui.autocomplete.js"></script>
+  <script>
+    $(function() {
+      $("input.autocomplete").autocomplete({
+        ajax: "list", 
+        match: function(typed) { return this.text.match(new RegExp(typed)); },
+        insertText: function(obj) { return obj.text },
+        templateText: "<li>Hey: <%= "<" + "%" %>= text %></li>"
+      })
+        .bind("activate.autocomplete", function(e, d) { console.log(d); })
+        .bind("cancel.autocomplete", function(e) { console.log("Cancelled"); });
+    });
+  </script>
+  
+</head>
+<body>
+
+<s:if test="doc.id != null">
+	Modifier Texte:
+<s:form id="textForm" action="updateDocument" enctype="multipart/form-data">
+	<s:textfield id="documentName" label="Nom du document" name="doc.name"/><br />
+	<s:textfield id="documenttext" label="Texte du document" name="doc.text"/><br />	
+	<s:textfield id="tagName" label="Nom du tag" name="newTagName"/><br />
+			
+	<s:submit label="Sauvegarder" />
+</s:form>
+</s:if>
+<s:else>
+	Ajouter Texte:
+<s:form id="textForm" action="addDocument" enctype="multipart/form-data">
+	<s:textfield id="documentName" label="Nom du document" name="doc.name"/><br />
+	<s:textfield id="documenttext" label="Texte du document" name="doc.text"/><br />	
+	<s:textfield id="tagName" label="Nom du tag" name="newTagName"/><br />
+				
+	<s:submit label="Sauvegarder" />
+</s:form>
+</s:else>
+
+
+<!-- 
+<s:a href="listTypes.action">Vos Textes:</s:a>
+
+<s:iterator value="alltext">
+
+	<s:property value="name" /> 
+	<s:property value="text" />
+	
+		<s:property value="update" /> 
+		
+	<s:url id="update" action="updateContactForm">
+	<s:param name="contactId" value="id" />
+	</s:url>
+	<s:a href="%{update}"> Actualiser </s:a>
+	
+	<s:url id="delete" action="deleteContact">
+	<s:param name="contactIdDelete" value="id" />
+	</s:url>
+	
+	<s:a href="%{delete}"> Supprimer </s:a> 
+	<s:a href="%{updateText}">Modifier du texte</s:a>
+</s:iterator>	<br />
+
+
+	<s:textfield id="tagName" label="Nom du tag" name="newTag"/><br />
+
+	<s:file name="file" label="Document" />	
+
+
+<s:url id="text" action="addDocumentForm">
+	<s:param name="docType" value="'TEXT'" />
+</s:url>
+<s:a href="%{text}">
+Text (<s:property value="documentList" />)
+</s:a><br/>
+
+
+
+
+
+
+
+
+
+<s:iterator value="text">
+ 	 		Le texte que vous venez d'insérer: <br>
+ 	 		<s:property value="text" />
+</s:iterator>
+<br/><br/>
+
+
+
+
+
+<br/><br/><br/><br/>
+
+Tous les Textes de Tous les Utilisateurs:<br/>
+<s:iterator value="allTextOfAllUser">
+
+			<s:property value="name"/><br>
+			<s:property value="text"/><br />
+			
+			<s:url id="updateTextOfUser" action="tryUpdateTextByOthersForm">
+				<s:param name="tryUpdateTextByOthersid" value="id" />
+			</s:url>
+			<s:a href="%{updateTextOfUser}">Actualiser </s:a><br>
+</s:iterator>
+<br>
+
+
+	<s:iterator value="images">
+	<img src="<s:url value="displayImage.action" />" width="32"
+            height="32" alt="update contact" />
+	</s:iterator>
+	
+<br>
+	tags:<br>
+<s:iterator value="documenttag">
+			<s:property value="name"/><br />
+			</s:iterator> -->
+</body>
+</html>

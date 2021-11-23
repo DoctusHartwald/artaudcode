@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ledger>
+	<id>1</id>
+	<memberName>Person1</memberName>
+	<checkNumber>1432</checkNumber>
+
+	<paymentType>Offertery</paymentType>
+	<depositAmount>50.0</depositAmount>
+	<paymentAmount>0.0</paymentAmount>
+	<checks>
+		<Check>
+			<checkNumber>1432</checkNumber>
+		</Check>
+	</checks>
+</Ledger>
+<Ledger>
+	<id>2</id>
+	<memberName>Person2</memberName>
+	<checkNumber>900</checkNumber>
+	<paymentType>Offertery</paymentType>
+	<depositAmount>20.0</depositAmount>
+	<paymentAmount>0.0</paymentAmount>
+	<checks>
+		<Check>
+			<checkNumber>900</checkNumber>
+		</Check>
+	</checks>
+</Ledger>
+<Ledger>
+	<id>3</id>
+	<memberName>Person3</memberName>
+	<checkNumber>1802</checkNumber>
+	<paymentType>Membership</paymentType>
+	<depositAmount>800.0</depositAmount>
+	<paymentAmount>0.0</paymentAmount>
+	<checks>
+		<Check>
+			<checkNumber>1802</checkNumber>
+		</Check>
+	</checks>
+</Ledger>
+<Ledger>
+	<id>4</id>
+	<memberName>Person4</memberName>
+	<checkNumber>5281</checkNumber>
+	<paymentType>Membership</paymentType>
+	<depositAmount>500.0</depositAmount>
+	<paymentAmount>0.0</paymentAmount>
+	<checks>
+		<Check>
+			<checkNumber>5281</checkNumber>
+		</Check>
+	</checks>
+</Ledger>
+<Ledger>
+	<id>5</id>
+	<memberName>Person5</memberName>
+	<checkNumber>5281</checkNumber>
+	<paymentType>Memorial</paymentType>
+	<depositAmount>50.0</depositAmount>
+	<paymentAmount>0.0</paymentAmount>
+	<checks>
+		<Check>
+			<checkNumber>5281</checkNumber>
+
+		</Check>
+	</checks>
+</Ledger>
+<Ledger>
+	<id>6</id>
+
+	<memberName>Person6</memberName>
+	<checkNumber>1803</checkNumber>
+
+	<paymentType>Charity</paymentType>
+	<depositAmount>100.0</depositAmount>
+	<paymentAmount>0.0</paymentAmount>
+	<checks>
+		<Check>
+			<checkNumber>1803</checkNumber>
+
+		</Check>
+	</checks>
+</Ledger>
+<Ledger>
+	<id>7</id>
+	<memberName>Person7</memberName>
+	<checkNumber>1803</checkNumber>
+
+	<paymentType>Charity</paymentType>
+	<depositAmount>50.0</depositAmount>
+	<paymentAmount>0.0</paymentAmount>
+	<checks>
+		<Check>
+			<checkNumber>1803</checkNumber>
+
+		</Check>
+	</checks>
+</Ledger>
+<Ledger>
+	<id>8</id>
+
+	<memberName>Person8</memberName>
+	<checkNumber>1151</checkNumber>
+
+	<paymentType>Membership</paymentType>
+	<depositAmount>500.0</depositAmount>
+	<paymentAmount>0.0</paymentAmount>
+	<checks>
+		<Check>
+			<checkNumber>1151</checkNumber>
+
+		</Check>
+	</checks>
+</Ledger>
+<Ledger>
+	<id>9</id>
+
+	<memberName>Person8</memberName>
+	<checkNumber>1152</checkNumber>
+
+	<paymentType>Membership</paymentType>
+	<depositAmount>250.0</depositAmount>
+	<paymentAmount>0.0</paymentAmount>
+	<checks>
+		<Check>
+			<checkNumber>1152</checkNumber>
+
+		</Check>
+	</checks>
+</Ledger>
+<Ledger>
+	<id>10</id>
+
+	<memberName>Person8</memberName>
+	<checkNumber>1153</checkNumber>
+
+	<paymentType>Membership</paymentType>
+	<depositAmount>50.0</depositAmount>
+	<paymentAmount>0.0</paymentAmount>
+	<checks>
+		<Check>
+			<checkNumber>1153</checkNumber>
+
+		</Check>
+	</checks>
+</Ledger>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.sample</groupId>
+    <artifactId>sampleapp</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <groupId>com.sample</groupId>
+  <artifactId>sampleapp-ear</artifactId>
+  <packaging>ear</packaging>
+  <version>${parent.version}</version>
+  <name>SampleApp EAR Module</name>
+
+  <scm>
+    <connection>${svn.baseurl}/${parent.artifactId}/{$artifactId}</connection>
+  </scm>
+
+  <build>
+    <plugins> 
+      <!-- Process BindJndiForEJBNonMessageBinding task in EAR --> 
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>was6-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>wsDefaultBindings</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <wasHome>${websphere.home}</wasHome>
+        </configuration>
+      </plugin>
+    </plugins>  
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.sample</groupId>
+      <artifactId>sampleapp-web</artifactId>
+      <version>${parent.version}</version>
+      <type>war</type>
+    </dependency>
+    <dependency>
+      <groupId>com.sample</groupId>
+      <artifactId>sampleapp-ejb</artifactId>
+      <version>${parent.version}</version>
+      <type>ejb</type>
+    </dependency>
+  </dependencies>
+  
+  <profiles>
+    <profile>
+      <id>deploy</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>was6-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <id>package</id>
+                <goals>
+                  <goal>wsUninstallApp</goal>
+                  <goal>installApp</goal>
+                  <goal>wsStartApp</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <applicationName>${artifactId}</applicationName>
+              <earFile>${project.build.directory}/${project.build.finalName}.${packaging}</earFile>
+              <verbose>true</verbose>
+              <wasHome>${websphere.home}</wasHome>
+              <host>${websphere.host}</host>
+              <username>${websphere.username}</username>
+              <password>${websphere.password}</password>
+              <!-- remember to import certificate from remote site when deploying to a site with security activated -->
+              <conntype>SOAP</conntype>
+              <port>${websphere.port}</port>
+              <verbose>false</verbose>
+              <!-- need to be false first time it's deployed to a server --> 
+              <updateExisting>false</updateExisting>              
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+</project>

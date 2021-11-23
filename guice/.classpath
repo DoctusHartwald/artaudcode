@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/aartaud/Mes documents/download INFO/guice-1.0/guice-struts2-plugin-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/aartaud/Mes documents/download INFO/guice-1.0/aopalliance.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/aartaud/Mes documents/download INFO/guice-1.0/guice-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/aartaud/Mes documents/download INFO/guice-1.0/guice-servlet-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/aartaud/Mes documents/download INFO/guice-1.0/guice-spring-1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

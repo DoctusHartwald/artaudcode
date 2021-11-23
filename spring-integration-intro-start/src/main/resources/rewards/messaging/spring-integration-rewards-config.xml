@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns="http://www.springframework.org/schema/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/integration
+            http://www.springframework.org/schema/integration/spring-integration-1.0.xsd">
+
+	<!-- TODO 05: configure the integration components -->
+	<!-- 
+		diningProcessor (gateway) ->
+		 diningChannel (channel without queue) ->
+		  service-activator (on rewardNetwork) ->
+		   confirmationChannel (channel with queue) 
+	 -->
+	<gateway id="diningProcessor" service-interface="rewards.messaging.client.DiningProcessor" default-request-channel="diningChannel" />
+	<channel id="diningChannel" />
+	<service-activator input-channel="diningChannel"
+		output-channel="confirmationChannel" ref="rewardNetwork" method="rewardAccountFor" />
+	<channel id="confirmationChannel">
+		<queue capacity="10"/>
+	</channel>
+	
+</beans:beans>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="Enter number defects and description" />
+
+
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<EditText android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:layout_gravity="bottom" android:id="@+id/txtItem"
+			android:maxLength="6" />
+		<EditText android:id="@+id/txtDescription"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:maxLength="20" android:layout_weight="1" />
+		<TextView android:id="@+id/TextViewHello"
+			android:layout_width="wrap_content" android:layout_height="fill_parent"
+			android:layout_gravity="center_horizontal" />
+		<Button android:layout_width="wrap_content" android:id="@+id/btnAdd"
+			android:layout_height="wrap_content" android:text="@string/add" />
+
+
+
+	</LinearLayout>
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="Process concerned" />
+
+	<Spinner android:id="@+id/Spinner01" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" />
+
+	<ListView android:id="@+id/listItems" android:layout_height="wrap_content"
+		android:layout_width="fill_parent"></ListView>
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:orientation="vertical" android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Enter the phone number of recipient" />
+		<EditText android:id="@+id/txtPhoneNo" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" />
+		<TextView android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Message" />
+		<EditText android:id="@+id/txtMessage" android:layout_width="fill_parent"
+			android:layout_height="150px" android:gravity="top" />
+		<Button android:id="@+id/btnSendSMS" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="Send SMS" />
+	</LinearLayout>
+
+
+</LinearLayout>

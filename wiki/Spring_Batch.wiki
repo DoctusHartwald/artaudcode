@@ -1,0 +1,17 @@
+#summary One-sentence summary of this page.
+#labels Featured
+
+= Introduction =
+#~ Description : Case study using Spring Batch
+#                                Case 1 : Hello World
+#                                Case 2 : Import  CSV => Database
+#                                Case 3 : Export Database => flat file
+#                                Case 4 : Export Database=> XML
+#                                Case 5 : Couple Spring Batch and  Velocity template.
+#                                Case 6 : export our database to a Jasper Report in PDF.
+
+
+= Details =
+
+You can download the latest source code in Source Tab .
+=>Browse => springbatch

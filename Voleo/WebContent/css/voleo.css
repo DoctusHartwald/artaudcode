@@ -1,0 +1,215 @@
+@CHARSET "ISO-8859-1";
+
+a > img{
+	border:0px;
+}
+
+#barreNavigationTags{
+	position:absolute;
+	top:180px;
+	left:20px;
+	right:20px;
+	text-align:justify;
+}
+
+body {
+	position: relative;
+	//width: 1000px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	/* Pour éviter de coller avec le haut de la fenêtre du navigateur*/
+	margin-bottom: 10px; /* Idem pour le bas du navigateur */
+	background-position: left;
+	font-family: Palatino Linotype, times, sans-serif, Verdana;
+}
+
+#logo {
+	position: absolute;
+	left: 50px;
+	top: 0px;
+	width: 180px;
+	height: 150px;
+	background-image: url("images/eagle.jpg");
+	background-repeat: no-repeat;
+}
+
+.titre {
+	position: absolute;
+	top: 10px;
+	left: 270px;
+	right: 350px;
+	text-align: center;
+	font-size: x-large;
+	background: url("images/fun.gif") top  no-repeat;
+	height: 100px;
+	width:300px;
+	padding-top: 35px;
+	padding-left: 85px;
+}
+
+#gauche {
+	position: absolute;
+	left: 20px;
+	top: 240px;
+	width: 160px;
+	padding-bottom: 10px;
+	/*height: 500px;
+	overflow: hidden;*/
+}
+
+#droite {
+	position: absolute;
+	right: 20px;
+	top: 240px;
+	width: 160px;
+	padding-bottom: 10px;
+}
+
+#contenu {
+	position: absolute;
+	top: 240px;
+	left: 180px;
+	right: 180px;	
+}
+
+#contenu h2 {
+	background-color: inherit;
+	line-height: 1em;
+	padding-top:0.5em;
+	padding-bottom: 0.5em;
+	text-indent: 5px;
+	border-bottom: 2px dotted #21177D;
+	/*border-bottom: 3px solid #ffff99;*/
+	font-variant: small-caps;
+	color: #ED7F10;
+	background: url("images/onglet2.jpg") left bottom no-repeat;
+	padding-left: 35px;
+	height: 35px;
+	 font-family: "Times New Roman","Book Antiqua", Vivaldi,georgia,arial,"Courier New","Blackadder ITC";
+	/*color: #225500;*/
+	font: bold;
+}
+#contenu h1 {
+	 font-family: "Times New Roman","Book Antiqua", Vivaldi,"Courier New","Blackadder ITC";
+	background-color: inherit;
+	line-height: 1em;
+	padding-top:0.5em;
+	padding-bottom: 0.5em;
+	text-indent: 5px;
+	border-bottom: 2px dotted #21177D;
+	/*border-bottom: 3px solid #ffff99;*/
+	font-variant: small-caps;
+	color: #ED7F10;
+	background: url("images/onglet2.jpg") left bottom no-repeat;
+	padding-left: 35px;
+	height: 35px;
+	font: bold;
+	/*color: #225500;*/
+}
+
+#contenu P:first-letter {
+	font-size: 250%;
+	color: #6D071A;
+	font-family: "Book Antiqua", Vivaldi, georgia, arial, "Courier New",
+		"Blackadder ITC";
+	font-weight: bold;
+}
+
+/*MENUS GAUCHE ET DROITE*/
+.pres_barre_verticale_gauche {
+	position: absolute;
+	left: 10px;
+	height: 100%;
+	/*	border-left: 1px solid #818181;*/ /*background-color: blue;*/
+}
+
+.pres_barre_verticale_droite {
+	position: absolute;
+	right: 10px;
+	height: 100%;
+	/*border-right: 1px solid #818181;*/ /*background-color: blue;*/
+}
+
+/*Sauvegarde pres_titre*/
+.pres_titre {
+	font-family: "Helvetica, sans-serif",Arial,"Times New Roman", "Courier New",Verdana,"Book Antiqua", Vivaldi,"Courier New","Blackadder ITC";
+	font-size: 16px;
+font-weight: bold;
+font-stretch: semi-condensed;
+    /*font-variant: small-caps;*/
+	
+	float: left;
+	margin: 20px 0px 0 0;
+	margin-top: 10px;
+	width: 100%;
+	line-height: 1em;
+	background-color: inherit;
+	line-height: 1em;
+	padding-bottom: 0.5em;
+	text-indent: 5px;
+	border-bottom: 2px solid #6B0D0D;
+	/*border-bottom: 3px solid #ffff99;*/
+	color: #6D071A;
+	background: url("images/onglet.jpg") left bottom no-repeat;
+	margin-bottom: 15px;
+}
+
+/*MENU GAUCHE*/
+.liste_tags {
+	width: 140px;
+	/*border-bottom: 1px solid #818181;*/
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+}
+
+.rechercher {
+	width: 140px;
+	padding-top: 5px;
+	padding-left: 20px;
+}
+
+/*MENU DROITE*/
+.liste_derniers_articles {
+	width: 145px;
+	/*border-bottom: 1px solid #818181;*/
+	padding-top:60px;
+	padding-left: 15px;
+	text-align: center;
+}
+
+.text_liste_derniers_articles {
+	width: 130px;
+	font-size: small;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+/*Design Tableau Control Panel */
+
+#echange {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border :solid black 1px;
+  }
+#echange th{
+background-color:silver;
+}
+
+/*************************/
+/*Sauvegarde pres_titre*/ /*border-top: 1px rgb(177,177,177) solid;*/ /*
+.pres_titre	{
+	margin-top: 10px;
+	width: 100%;
+	
+	padding-top:5px;
+	padding-bottom:5px;
+	text-align: center;
+	font-size:large;
+	color:#CC5500;
+	background: #FFFFFF url("images/tab.png") no-repeat fixed right  ;
+}	
+*/

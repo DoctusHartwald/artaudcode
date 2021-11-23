@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:batch="http://www.springframework.org/schema/batch"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:jms="http://www.springframework.org/schema/jms" xmlns:amq="http://activemq.apache.org/schema/core"
+    xmlns:util="http://www.springframework.org/schema/util"
+
+    xsi:schemaLocation="http://www.springframework.org/schema/beans   http://www.springframework.org/schema/beans/spring-beans.xsd
+
+                         http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.1.xsd
+                        http://www.springframework.org/schema/context
+                        http://www.springframework.org/schema/context/spring-context.xsd
+                        http://www.springframework.org/schema/jms
+                        http://www.springframework.org/schema/jms/spring-jms.xsd
+                        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+                        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+                        ">
+	<!-- Author Artaud Antoine  -->
+    <!-- 1) USE ANNOTATIONS TO CONFIGURE SPRING BEANS -->
+    <context:component-scan base-package="com.batch" />
+
+    <!-- 2) DATASOURCE, TRANSACTION MANAGER AND JDBC TEMPLATE  -->
+    <bean id="dataSource"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost/seamdb" />
+        <property name="username" value="root" />
+        <property name="password" value="root" />
+    </bean>
+
+    <bean id="transactionManager"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+
+    <!-- 3) JOB REPOSITORY - WE USE IN-MEMORY REPOSITORY FOR OUR EXAMPLE -->
+    <bean id="jobRepository"
+        class="org.springframework.batch.core.repository.support.MapJobRepositoryFactoryBean">
+        <property name="transactionManager" ref="transactionManager" />
+    </bean>
+
+    <!-- 4) LAUNCH JOBS FROM A REPOSITORY -->
+    <bean id="jobLauncher"
+        class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+        <property name="jobRepository" ref="jobRepository" />
+    </bean>
+
+
+    <!--
+        5) Define the job and its steps. In our case I use one step. Configure
+        its readers and writers
+    -->
+    <batch:job id="simpleJob">
+        <batch:step id="step1">
+            <batch:tasklet>
+                <batch:chunk reader="cursorReader" writer="xmlFileWriter"
+                    commit-interval="1000" />
+            </batch:tasklet>
+        </batch:step>
+    </batch:job>
+
+    <!-- ======================================================= -->
+    <!--  6) READER :INPUT -->
+    <!-- ======================================================= -->
+    <bean id="cursorReader"
+        class="org.springframework.batch.item.database.JdbcCursorItemReader">
+        <property name="dataSource" ref="dataSource" />
+        <property name="sql" value="select * from ledger LIMIT 10" />
+        <property name="rowMapper" ref="ledgerRowMapper" />
+    </bean>
+
+
+    <!-- ======================================================= -->
+    <!--  7) XML WRITER : OUTPUT -->
+    <!-- ======================================================= -->
+    <bean id="xmlFileWriter" class="org.springframework.batch.item.xml.StaxEventItemWriter">
+        <property name="resource" value="file:./output/members.xml" />
+        <property name="rootTagName" value="members" />
+        <property name="marshaller" ref="customMembersMarshaller" />
+        <property name="overwriteOutput" value="true" />
+    </bean>
+    <bean id="customMembersMarshaller" class="org.springframework.oxm.xstream.XStreamMarshaller">
+        
+        <property name="useAttributeForTypes">
+            <list>
+                <value>com.batch.model.Check</value>
+            </list>
+        </property>
+        <property name="aliases">
+            <util:map id="aliases">
+                <entry key="Check" value="com.batch.model.Check"/>
+                <entry key="Ledger" value="com.batch.model.Ledger"/>
+                <entry key="receiptDate" value="java.util.Date" />
+            </util:map>
+        </property>
+    </bean>
+</beans>
+

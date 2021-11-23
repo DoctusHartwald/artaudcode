@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+		targetNamespace="http://www.springsource.com/dining-requests"
+		xmlns:dining="http://www.springsource.com/dining-requests"
+		elementFormDefault="qualified">
+
+	<element name="diningRequests">
+		<complexType>
+			<sequence>
+				<element name="dining" type="dining:DiningRequest" maxOccurs="unbounded"/>
+			</sequence>
+		</complexType>
+	</element>
+
+	<complexType name="DiningRequest">
+		<sequence>
+			<element name="amount">
+				<complexType>
+					<attribute name="value" type="decimal"/>
+				</complexType>
+			</element>
+			<element name="creditcard">
+				<complexType>
+					<attribute name="number" type="string"/>
+				</complexType>
+			</element>
+			<element name="merchant">
+				<complexType>
+					<attribute name="number" type="string"/>
+				</complexType>
+			</element>
+			<element name="timestamp" type="dining:Timestamp" />
+		</sequence>
+		<attribute name="transaction-id" type="string"/>
+	</complexType>
+
+	<complexType name="Timestamp">
+		<sequence>
+			<element name="date" type="date"/>
+			<element name="time" type="time" minOccurs="0"/>
+		</sequence>
+	</complexType>
+
+</schema>

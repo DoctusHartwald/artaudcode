@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.sample</groupId>
+    <artifactId>sampleapp</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <artifactId>sampleapp-ejb</artifactId>
+  <name>SampleAPP EJB Module</name>
+  <version>${parent.version}</version>
+  <packaging>ejb</packaging>
+  <description>SampleAPPEJB</description>
+
+  <scm>
+    <connection>${svn.baseurl}/${parent.artifactId}/{$artifactId}</connection>
+  </scm>
+
+  <dependencies>
+    <!-- Test -->  
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- Business -->    
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-j2ee_1.4_spec</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <finalName>${project.artifactId}</finalName>
+    
+    <plugins>
+      <plugin>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>**/*EJBTest.java</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+      <!-- Maven Ant run plugin to run ejb-deploy automatically to simulate websphere's generation of stubs and skeletons -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>was6-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>ejbdeploy</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <wasHome>${websphere.home}</wasHome>
+          <legacyMode>true</legacyMode>
+        </configuration>      
+      </plugin>
+      <!-- Packaging -->    
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-ejb-plugin</artifactId>
+        <configuration>
+          <generateClient>true</generateClient>
+          <archive>
+          	<manifest>
+          		<!-- generate manifest file properly -->
+              <addClasspath>true</addClasspath>
+          	</manifest>
+          </archive>
+          <clientExcludes>
+            <clientExclude>**/*Bean.class</clientExclude>
+            <clientExclude>**/*Session.class</clientExclude>
+          </clientExcludes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+  <!-- Xdoclet generator profile -->
+    <profile>
+      <id>xdoclet</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <!-- Xdoclet generation -->
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>xdoclet-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>xdoclet</id>
+                <phase>generate-sources</phase>
+                <goals>
+                  <goal>xdoclet</goal>
+                </goals>
+              </execution>
+            </executions>
+            <configuration>
+              <tasks>
+                <ejbdoclet destDir="${project.build.sourceDirectory}" ejbSpec="2.0" verbose="true" force="true">
+                  <fileset dir="${project.build.sourceDirectory}">
+                    <include name="**/*Bean.java"/>
+                    <include name="**/*MDB.java"/>
+                  </fileset>
+                  <homeinterface/>
+                  <remoteinterface/>
+                  <localhomeinterface/>
+                  <localinterface/>
+                  <session/>
+                  <!--utilobject/-->
+                  <deploymentdescriptor destDir="${basedir}/src/main/resources/META-INF"/>
+                  <!--jboss destDir="${project.build.outputDirectory}/META-INF" version="4.0" xmlencoding="UTF-8"/-->
+                  <!--weblogic destDir="${project.build.outputDirectory}/META-INF" version="8.1" createtables="Disabled" /-->
+                  <websphere destDir="${basedir}/src/main/resources/META-INF" xmlencoding="UTF-8" validatexml="true"/>
+                </ejbdoclet>
+              </tasks>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+  <reporting>
+    <outputDirectory>${basedir}/../target/site/${artifactId}</outputDirectory>
+  </reporting>
+</project>

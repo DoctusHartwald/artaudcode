@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<libraryInfos>
+<libraryInfo home="c:\Program Files\IBM\WebSphere\AppServer1\java\jre" version="1.5.0">
+<bootpath>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\vm.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\core.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\charsets.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\graphics.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\security.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmpkcs.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmorb.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmcfw.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmorbapi.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjcefw.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjgssprovider.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjsseprovider2.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjaaslm.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjaasactivelm.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmcertpathprovider.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\server.jar"/>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\xml.jar"/>
+</bootpath>
+<extensionDirs>
+<entry path="c:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ext"/>
+</extensionDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files\IBM\WebSphere\AppServer1\java\jre" version="1.5.0">
+<bootpath>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\vm.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\core.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\charsets.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\graphics.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\security.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmpkcs.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmorb.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmcfw.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmorbapi.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjcefw.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjgssprovider.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjsseprovider2.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjaaslm.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjaasactivelm.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmcertpathprovider.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\server.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\xml.jar"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ext"/>
+</extensionDirs>
+</libraryInfo>
+<libraryInfo home="C:\Program Files\IBM\WebSphere\AppServer1\java" version="1.5.0">
+<bootpath>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\vm.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\core.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\charsets.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\graphics.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\security.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmpkcs.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmorb.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmcfw.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmorbapi.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjcefw.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjgssprovider.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjsseprovider2.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjaaslm.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmjaasactivelm.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ibmcertpathprovider.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\server.jar"/>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\xml.jar"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\IBM\WebSphere\AppServer1\java\jre\lib\ext"/>
+</extensionDirs>
+</libraryInfo>
+</libraryInfos>

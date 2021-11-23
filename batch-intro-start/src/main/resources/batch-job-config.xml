@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<beans:beans xmlns="http://www.springframework.org/schema/batch"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/batch 
+           http://www.springframework.org/schema/batch/spring-batch-2.1.xsd">
+
+	<!--
+		TODO 10: define the batch job with the first step Define a job with id
+		resendUnprocessedDiningsJob (TODO 10). Inside of that job, define a
+		step with id processConfirmationsStep. This is going to be the first
+		step of our two-step job. Inside the step element, create tasklet with
+		a chunk child element. This syntax allows you to easily configure the
+		typical case of a step that consists of reading, (optionally)
+		processing and writing some data. This chunk requires four arguments
+		to be set: reader and writer need to refer to the names of the beans
+		you just defined for the ConfirmationReader and ConfirmationUpdater,
+		respectively.
+	-->
+
+	<job id="resendUnprocessedDiningsJob">
+		<step id="processConfirmationsStep">
+			<tasklet>
+			
+				<chunk reader="confirmationReader" writer="confirmationUpdater"
+					commit-interval="${chunk.size}" reader-transactional-queue="true" />
+			</tasklet>
+		</step>
+
+	</job>
+
+	<!-- TODO 16: define the second step -->
+
+</beans:beans>

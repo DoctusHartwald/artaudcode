@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[2.3.2.201003220227-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[true]]></enableImports>
+	<configs>
+		<config>src/test/resources/rewards/messaging/IdempotentRewardNetworkIntegrationTests-context.xml</config>
+		<config>src/test/resources/rewards/messaging/MarshallingIntegrationTests-context.xml</config>
+		<config>src/test/resources/rewards/messaging/RewardMessagingIntegrationTests-context.xml</config>
+		<config>src/main/resources/rewards/messaging/spring-integration-idempotent-receiver-config.xml</config>
+		<config>src/main/resources/rewards/messaging/spring-integration-infrastructure-config.xml</config>
+		<config>src/main/resources/rewards/messaging/spring-integration-marshalling-config.xml</config>
+	</configs>
+	<configSets>
+		<configSet>
+			<name><![CDATA[idempotent]]></name>
+			<allowBeanDefinitionOverriding>true</allowBeanDefinitionOverriding>
+			<incomplete>false</incomplete>
+			<configs>
+				<config>src/main/resources/rewards/messaging/spring-integration-idempotent-receiver-config.xml</config>
+				<config>src/test/resources/rewards/messaging/IdempotentRewardNetworkIntegrationTests-context.xml</config>
+			</configs>
+		</configSet>
+	</configSets>
+</beansProjectDescription>

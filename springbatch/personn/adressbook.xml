@@ -1,0 +1,18 @@
+<addressbook name="Manchester United Address Book">
+
+	<person name="Roy Keane">
+		<address>23 Whistlestop Ave</address>
+		<ssn>111-222-3333</ssn>
+		<email>roykeane@manutd.com</email>
+		<home-phone>720.111.2222</home-phone>
+		<work-phone>111.222.3333</work-phone>
+	</person>
+
+	<person name="Juan Sebastian Veron">
+		<address>123 Foobar Lane</address>
+		<ssn>222-333-444</ssn>
+		<email>juanveron@manutd.com</email>
+		<home-phone>720.111.2222</home-phone>
+		<work-phone>111.222.3333</work-phone>
+	</person>
+</addressbook>

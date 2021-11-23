@@ -1,0 +1,34 @@
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-03-27 22:32:47
+hint
+project --topLevelPackage com.springsource.pizzashop
+persistence setup --provider HIBERNATE --database MYSQL
+database properties set --key database.url --value jdbc:mysql://localhost:3306/pizza
+database properties set --key database.username --value root 
+entity --class ~.domain.Topping --testAutomatically
+field string --fieldName name --notNull --sizeMin 2
+entity --class ~.domain.Base --testAutomatically
+field string --fieldName name --notNull --sizeMin 2
+entity --class ~.domain.Pizza --testAutomatically
+field string --fieldName name --notNull --sizeMin 2
+field number --type java.lang.Double --fieldName price --min 0 --primitive
+field reference --type ~.domain.Base --fieldName base --notNull
+field set --element ~.domain.Topping --fieldName toppings --cardinality MANY_TO_MANY
+entity --class ~.domain.PizzaOrder –testAutomatically
+field string --fieldName name --notNull --sizeMin 2
+field string --fieldName address --sizeMax 50
+field date --type java.util.Date --fieldName deliveryDate --class ~.domain.PizzaOrder
+field set --element ~.domain.Pizza --fieldName pizzas --sizeMin 1
+field number --type java.lang.Double --fieldName total --min 0 --primitive
+perform tests
+perform tests
+perform tests
+perform eclipse
+controller all --package ~.web
+perform eclipse
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-03-28 22:50:03
+hint
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-03-28 23:11:39
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-14 23:02:12
+hint
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-04-16 23:12:42
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-04-16 23:47:43

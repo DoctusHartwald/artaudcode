@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ledgers>
+	<Ledger>
+		<id>0</id>
+		<receiptDate>2009-01-22 00:02:00.0 CET</receiptDate>
+		<memberName>Person1</memberName>
+		<checkNumber>1432</checkNumber>
+		<checkDate>2009-01-22 00:02:00.0 CET</checkDate>
+		<paymentType>Offertery</paymentType>
+		<depositAmount>50.0</depositAmount>
+		<paymentAmount>0.0</paymentAmount>
+	</Ledger>
+	<Ledger>
+		<id>0</id>
+		<receiptDate>2009-01-22 00:02:00.0 CET</receiptDate>
+		<memberName>Person2</memberName>
+		<checkNumber>900</checkNumber>
+		<checkDate>2009-01-22 00:02:00.0 CET</checkDate>
+		<paymentType>Offertery</paymentType>
+		<depositAmount>20.0</depositAmount>
+		<paymentAmount>0.0</paymentAmount>
+	</Ledger>
+	<Ledger>
+		<id>0</id>
+		<receiptDate>2009-01-22 00:02:00.0 CET</receiptDate>
+		<memberName>Person3</memberName>
+		<checkNumber>1802</checkNumber>
+		<checkDate>2009-01-14 00:02:00.0 CET</checkDate>
+		<paymentType>Membership</paymentType>
+		<depositAmount>800.0</depositAmount>
+		<paymentAmount>0.0</paymentAmount>
+	</Ledger>
+	<Ledger>
+		<id>0</id>
+		<receiptDate>2009-01-22 00:02:00.0 CET</receiptDate>
+		<memberName>Person4</memberName>
+		<checkNumber>5281</checkNumber>
+		<checkDate>2009-01-22 00:02:00.0 CET</checkDate>
+		<paymentType>Membership</paymentType>
+		<depositAmount>500.0</depositAmount>
+		<paymentAmount>0.0</paymentAmount>
+	</Ledger>
+	<Ledger>
+		<id>0</id>
+		<receiptDate>2009-01-22 00:02:00.0 CET</receiptDate>
+		<memberName>Person5</memberName>
+		<checkNumber>5281</checkNumber>
+		<checkDate>2009-01-22 00:02:00.0 CET</checkDate>
+		<paymentType>Memorial</paymentType>
+		<depositAmount>50.0</depositAmount>
+		<paymentAmount>0.0</paymentAmount>
+	</Ledger>
+</Ledgers>

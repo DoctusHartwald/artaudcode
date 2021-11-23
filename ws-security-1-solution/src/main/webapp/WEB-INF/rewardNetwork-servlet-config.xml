@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+							http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean class="org.springframework.ws.server.endpoint.mapping.PayloadRootQNameEndpointMapping">
+        <property name="defaultEndpoint" ref="rewardNetworkEndpoint" />
+        <property name="interceptors">
+            <list>
+                <bean class="org.springframework.ws.soap.server.endpoint.interceptor.SoapEnvelopeLoggingInterceptor" />
+                <ref bean="securityInterceptor" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="rewardNetworkEndpoint" class="rewards.ws.RewardNetworkEndpoint">
+        <constructor-arg ref="rewardNetwork" />
+    </bean>
+
+    <bean id="securityInterceptor" class="org.springframework.ws.soap.security.xwss.XwsSecurityInterceptor">
+        <property name="policyConfiguration" value="/WEB-INF/xwss/server-policy.xml" />
+        <property name="callbackHandler" ref="certificateHandler" />
+    </bean>
+
+    <bean id="certificateHandler" class="org.springframework.ws.soap.security.xwss.callback.KeyStoreCallbackHandler">
+        <property name="trustStore" ref="trustStore" />
+    </bean>
+
+    <bean id="trustStore" class="org.springframework.ws.soap.security.support.KeyStoreFactoryBean">
+        <property name="location" value="/WEB-INF/xwss/server-store.jks" />
+        <property name="password" value="server" />
+    </bean>
+
+</beans>

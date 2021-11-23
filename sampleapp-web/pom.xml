@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.sample</groupId>
+		<artifactId>sampleapp</artifactId>
+		<version>1.0</version>
+	</parent>
+
+	<artifactId>sampleapp-web</artifactId>
+	<name>SampleAPP Web Module</name>
+	<version>${parent.version}</version>
+	<packaging>war</packaging>
+	<description>SampleAPP Web</description>
+
+	<scm>
+		<connection>${svn.baseurl}/${parent.artifactId}/{$artifactId}</connection>
+	</scm>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.sample</groupId>
+			<artifactId>sampleapp-ejb</artifactId>
+			<version>${parent.version}</version>
+			<type>ejb-client</type>
+		</dependency>
+	   <dependency>
+	   	 <groupId>commons-logging</groupId>
+	   	 <artifactId>commons-logging</artifactId>
+	   </dependency>
+	   <dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+		</dependency>	   
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-j2ee_1.4_spec</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+  <reporting>
+    <outputDirectory>${basedir}/../target/site/${artifactId}</outputDirectory>
+  </reporting>
+</project>

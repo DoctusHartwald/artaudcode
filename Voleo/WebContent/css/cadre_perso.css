@@ -1,0 +1,93 @@
+@CHARSET "ISO-8859-1";
+
+#perso	{
+	position: absolute;
+	right: 20px;
+	top: 0px;
+	width: 298px;
+	height: 158px;
+	z-index:45;
+	
+	/*background-color: white;*/
+	
+	/*gerer la transparence sur tous les navigateurs
+	-moz-opacity:0.5;
+	opacity: 0.5;
+	filter:alpha(opacity=50);*/
+}
+
+#perso_in	{
+	position: absolute;
+	right: 10px;
+	left: 0px;
+	top: 0px;
+	bottom: 10px;
+	z-index: 50;
+	background-image:url("images/Aluminium2.png");
+	border: 1px rgb(177,177,177) solid;
+}
+
+.bord-bas-droite	{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	background-image:url("images/bord-bas-droite.png");
+	background-repeat:no-repeat;
+	height:10px;
+	width:10px;
+}
+
+.bord-bas-gauche	{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-image:url("images/bord-bas-gauche.png");
+	background-repeat:no-repeat;
+	height:10px;
+	width:10px;
+}
+
+.bord-haut-droite	{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	background-image:url("images/bord-haut-droite.png");
+	background-repeat:no-repeat;
+	height:10px;
+	width:10px;
+}
+
+.cote-bas	{
+	position: absolute;
+	bottom: 0px;
+	right: 10px;
+	left: 10px;
+	background-image:url("images/cote-bas.png");
+	background-repeat:repeat-x;
+	height:10px;
+}
+
+.cote-droite	{
+	position: absolute;
+	bottom: 10px;
+	top: 10px;
+	right: 0px;
+	background-image:url("images/cote-droite.png");
+	background-repeat:repeat-y;
+	width:10px;
+}
+
+.redimensionneur	{
+	position:absolute;
+	bottom: 5px;
+	left: 10px;
+	background-image: url("images/redimensionner.png");
+	background-repeat:no-repeat;
+	height: 45px;
+	width: 45px;
+	
+}
+
+
+
+

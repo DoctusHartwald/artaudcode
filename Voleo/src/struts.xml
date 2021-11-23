@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.objectFactory" value="spring" />
+    <constant name="struts.devMode" value="true" />
+	
+	<package name="note" extends="struts-default">
+		<action name="noteArticle" method="ajoutNoteArticle" class="documentAction">
+			<result>/document/listDocuments.jsp</result>
+		</action>
+		<action name="noteCommentaire" method="ajoutNoteCommentaire" class="commentaireAction">
+			<result  type="redirect-action">listDocuments</result>
+		</action>
+	</package>
+
+
+	<package name="forum" extends="struts-default">
+		<action name="listDiscussion" method="listDiscussion" class="forumAction">
+			<result>/forum/discussions.jsp</result>
+		</action>
+		
+		<action name="discussionSansReponse" method="discussionSansReponse" class="forumAction">
+			<result>/forum/discussionsSansReponse.jsp</result>
+		</action>
+		
+		<action name="myDiscussions" method="myDiscussions" class="forumAction">
+			<result name="success">/forum/mydiscussions.jsp</result>
+		</action>
+		
+		<action name="getWallToWallByWallToWallId" method="getWallToWallByWallToWallId" class="forumAction">
+			<result>/forum/getWallToWall.jsp</result>
+		</action>
+		
+		<action name="getForumDiscussionByForumId" method="getForumDiscussionByForumId" class="forumAction">
+			<result>/forum/getForumDiscussion.jsp</result>
+		</action>
+		
+		<action name="addUpdateDiscussionForm" method="addUpdateDiscussionForm" class="forumAction">
+			<result>/forum/addUpdateDiscussion.jsp</result>
+		</action>
+		
+		<action name="addDiscussionForum" method="addDiscussionForum" class="forumAction">
+			<result>/forum/discussions.jsp</result>
+		</action>
+		
+		<action name="addReponseForm" method="addReponseForm" class="forumAction">
+			<result>/forum/addReponse.jsp</result>
+		</action>
+		
+		<action name="addReponse" method="addReponse" class="forumAction">
+			<result>/forum/reponsesDiscussion.jsp</result>
+		</action>
+		
+		<action name="listResponseDiscussion" method="listResponseDiscussion" class="forumAction">
+			<result name="success">/forum/reponsesDiscussion.jsp</result>
+		</action>
+		
+		<action name="sendWallToWallForm" method="sendWallToWallForm" class="forumAction">
+			<result name="success">/forum/sendWallToWall.jsp</result>
+		</action>
+		
+		<action name="sendWallToWall" method="sendWallToWall" class="forumAction">
+			<result name="success">/forum/discussions.jsp</result>
+		</action>
+		
+		<action name="receivedWallToWall" method="receivedWallToWall" class="forumAction">
+			<result name="success">/forum/receivedWallToWall.jsp</result>
+		</action>
+		
+		<action name="deleteWallToWall" method="deleteWallToWall" class="forumAction">
+			<result name="success">/forum/receivedWallToWall.jsp</result>
+		</action>
+	</package>
+
+
+    <package name="commentaire" extends="struts-default">
+
+		<action name="addCommentaireForm" method="addCommentaireForm" class="commentaireAction">
+            <result>/document/addCommentaire.jsp</result>
+            <result name="input">/document/addCommentaire.jsp</result>
+        </action>
+      
+         <action name="addCommentaire" method="addCommentaire" class="commentaireAction">
+             <result type="redirect-action">listTypes.action</result>
+        </action>
+        
+        <action name="getCommentaireByDocumentId" method="getCommentaireByDocumentId" class="commentaireAction">
+            <result>/document/commentaires.jsp</result>
+        </action>
+        
+        <action name="getSelectedCommentaireByDocumentId" method="getSelectedCommentaireByDocumentId" class="commentaireAction">
+            <result>/document/getSearchedCommentaire.jsp</result>
+        </action>
+        
+        <action name="deleteNotificationCommentaire" method="deleteNotificationCommentaire" class="commentaireAction">
+            <result>/admin/gestionNotification.jsp</result>
+        </action>
+    </package>
+
+	<package name="historique" extends="struts-default">
+
+		<action name="getHistoriqueByUser" method="getHistoriqueByUser" class="historiqueAction">
+            <result>/document/historiqueModification.jsp</result>
+        </action>
+        
+        <action name="getDocumentBackUpModification" method="getDocumentBackUpModification" class="historiqueAction">
+            <result>/document/getBackUpDocument.jsp</result>
+        </action>
+        
+        <action name="approuvePreviousDocumentVersion" method="approuvePreviousDocumentVersion" class="historiqueAction">
+           <result name="success" type="redirect-action">listTypes.action</result>
+        </action>
+        
+        <action name="supprimerHistorique" method="supprimerHistorique" class="historiqueAction">
+			<result>/document/historiqueModification.jsp</result>
+        </action>
+
+    </package>
+    <package name="tag" extends="struts-default">
+    	<action name="listAvailableTag" method="listAvailableTag" class="documentAction">
+    		<result>/document/listAvailableTag.jsp</result>
+    	</action>
+    	<action name="listSelectedTag" method="listSelectedTag" class="documentAction">
+    		<result>/document/listSelectedTag.jsp</result>
+    	</action>
+    	<action name="listDocumentFiltered" method="listDocumentFiltered" class="documentAction">
+    		<result>/document/listDocumentFiltered.jsp</result>
+    	</action>
+    	<action name="addSelectedTag" method="addSelectedTag" class="documentAction">
+    		<result>/document/listDocumentFiltered.jsp</result>
+    	</action>
+    	<action name="removeSelectedTag" method="removeSelectedTag" class="documentAction">
+    		<result>/document/listDocumentFiltered.jsp</result>
+    	</action>
+    </package>
+    
+    <package name="document" extends="struts-default">
+    	<action name="lastArticles" method="lastArticles" class="documentAction">
+    		<result>/document/listeDerniersArticles.jsp</result>
+    	</action>
+    	
+        <action name="downloadFile" method="downloadFile" class="documentAction">
+			<result name="success" type="stream">
+			  <param name="contentType">image</param>
+			  <param name="inputName">imageStream</param>
+			</result>
+        </action>
+
+        <action name="downloadDoc" method="downloadDoc" class="documentAction">
+			<result name="successPdf" type="stream">
+			  <param name="contentType">application/pdf</param>
+			  <param name="inputName">docStream</param>
+			</result>
+			<result name="successDoc" type="stream">
+			  <param name="contentType">application/msword</param>
+			  <param name="inputName">docStream</param>
+			</result>
+        </action>
+      	<!-- <param name="inputName">docStream</param>-->
+      	
+      <action name="downloadVideo" method="downloadVideo" class="documentAction">
+			<result name="success" type="stream">
+			  <param name="contentType">video</param>
+			  <param name="inputName">videoStream</param>
+			</result>
+        </action>
+      
+        <action name="addDocumentForm" method="addDocumentForm" class="documentAction">
+			<result name="text">/document/addUpdateText.jsp</result>           
+         	<result name="image">/document/addUpdateImage.jsp</result>
+            <result name="video">/document/addUpdateVideo.jsp</result>
+            <result name="rawfile">/document/addUpdateRawFile.jsp</result>
+        </action>
+
+        <action name="updateDocumentForm" method="updateDocumentForm" class="documentAction">
+            <result name="image">/document/addUpdateImage.jsp</result>
+            <result name="video">/document/addUpdateVideo.jsp</result>
+            <result name="text">/document/addUpdateText.jsp</result>
+            <result name="rawfile">/document/addUpdateRawFile.jsp</result>
+        </action>
+
+        <action name="addDocument" method="addDocument" class="documentAction">
+			  <result name="success">/document/listDocuments.jsp</result>
+        </action>
+
+        <action name="updateDocument" method="updateDocument" class="documentAction">
+			  <result name="success">/document/listDocuments.jsp</result>
+        </action>
+
+        <action name="removeDocument" method="removeDocument" class="documentAction">
+			  <result name="success">/document/listDocuments.jsp</result>
+        </action>
+               
+        <action name="listDocuments" method="listDocuments" class="documentAction">
+            <result>/document/listDocuments.jsp</result>
+            <result name="input">/document/listDocuments.jsp</result>
+        </action>
+        
+        <action name="listAllDocuments" method="listAllDocuments" class="documentAction">
+            <result>/document/listAllDocuments.jsp</result>
+            <result name="input">/document/listAllDocuments.jsp</result>
+        </action>
+        
+        <action name="listPendingModifications" method="listPendingModifications" class="documentAction">
+            <result>/document/listPendingModifications.jsp</result>
+        </action>
+        
+        <action name="listPendingTypes" method="listPendingTypes" class="documentAction">
+            <result>/document/listPendingTypes.jsp</result>
+        </action>
+        
+        <action name="listTypes" method="listTypes" class="documentAction">
+            <result>/document/listTypes.jsp</result>
+            <result name="input">/document/listTypes.jsp</result>
+        </action>
+        
+        <action name="approve" method="approve" class="documentAction">
+            <result>/document/listPendingModifications.jsp</result>
+        </action>
+        
+        <action name="reject" method="reject" class="documentAction">
+            <result>/document/listPendingModifications.jsp</result>
+        </action>
+        
+        <action name="getSearchedDocument" method="getSearchedDocument" class="documentAction">
+            <result>/document/getSearchedDocument.jsp</result>
+            <result name="input">/document/getSearchedDocument.jsp</result>
+        </action>
+        
+         <action name="displayImage" method="displayImage" class="documentAction">
+            <result>/document/displayImage.jsp</result>
+            <result name="input">/document/displayImage.jsp</result>
+        </action>
+        
+        
+    </package>
+
+    <package name="contact" extends="struts-default">
+   	    <action name="listContacts" method="refreshContacts" class="contactAction">
+            <result>/contact/contacts.jsp</result>
+        </action>
+
+   	    <action name="addContactForm" method="addContactForm" class="contactAction">
+            <result>/contact/addUpdateContact.jsp</result>
+        </action>
+
+   	    <action name="updateContactForm" method="updateContactForm" class="contactAction">
+            <result>/contact/addUpdateContact.jsp</result>
+        </action>
+    
+    	<action name="addContact" method="addContact" class="contactAction">
+            <result>/contact/contacts.jsp</result>
+        </action>
+
+    	<action name="updateContact" method="updateContact" class="contactAction">
+            <result>/contact/contacts.jsp</result>
+        </action>
+	
+	
+		<action name="deleteContact" method="deleteContact" class="contactAction">
+			<result name="success" type="redirect-action">listContacts.action</result>
+        </action>
+		
+	</package>
+
+    <package name="search" extends="struts-default">
+		<action name="searchForm" method="searchForm" class="searchAction">
+			<result>/search/searchForm.jsp</result>
+        </action>
+
+		<action name="search" method="search" class="searchAction">
+			<result>/search/searchResult.jsp</result>
+        </action>
+ 	</package>
+
+
+  <package name="admin" extends="struts-default">
+
+		<action name="adminAddUpdateUserForm" method="adminAddUpdateUserForm" class="adminAction">
+            <result>/admin/addUpdateUser.jsp</result>
+            <result name="input">/admin/addUpdateUser.jsp</result>
+        </action>
+        
+        <action name="searchUser" method="searchUser" class="adminAction">
+            <result>/admin/addUpdateUser.jsp</result>
+            <result name="input">/admin/addUpdateUser.jsp</result>
+        </action>
+        
+        <action name="addNewsForm" method="addNewsForm" class="adminAction">
+            <result>/admin/addUpdateNews.jsp</result>
+            <result name="input">/admin/addUpdateNews.jsp</result>
+        </action>
+        
+        <action name="addNews" method="addNews" class="adminAction">
+            <result>/admin/allNews.jsp</result>
+        </action>
+        
+         <action name="updateNewsForm" method="updateNewsForm" class="adminAction">
+            <result>/admin/addUpdateNews.jsp</result>
+            <result name="input">/admin/addUpdateNews.jsp</result>
+        </action>
+        
+         <action name="updateNews" method="updateNews" class="adminAction">
+            <result>/admin/allNews.jsp</result>
+        </action>
+        
+        <action name="removeNews" method="removeNews" class="adminAction">
+			  <result name="success">/admin/allNews.jsp</result>
+        </action>
+        
+       	<action name="listAllNews" method="listAllNews" class="adminAction">
+			  <result>/admin/allNews.jsp</result>
+        </action> 
+        
+        <action name="deleteUser" method="deleteUser" class="adminAction">
+			  <result name="success">/admin/allUser.jsp</result>
+        </action>
+        
+        <action name="updateTypeUserToAdmin" method="updateTypeUserToAdmin" class="adminAction">
+			  <result>/admin/addUpdateUser.jsp</result>
+        </action>
+       
+       <action name="listUser" method="listUser" class="adminAction">
+			  <result>/admin/allUser.jsp</result>
+        </action>
+        
+         <action name="changeUserType" method="changeUserType" class="adminAction">
+			  <result name="success">/admin/allUser.jsp</result>
+        </action>
+        
+          <!-- Test Partie Admin -->
+         <!-- Control Panel -->
+        <action name="control" method="control" class="adminAction">
+            <result>/admin/SearchUser.jsp</result>
+        </action>
+         
+        <action name="pseudoList" method="pseudoList" class="adminAction">
+		     <result>/admin/SearchUser.jsp</result>
+        </action>
+        
+        <action name="adminListUser" method="adminListUser" class="adminAction">
+            <result>/admin/SearchUser.jsp</result>
+        </action>
+        
+         <action name="pseudoList" method="pseudoList" class="adminAction">
+            <result>/admin/SearchUser.jsp</result>
+        </action>
+
+          <action name="userSearchForm" method="userSearchForm" class="adminAction">
+            <result>/admin/SearchUser.jsp</result>
+          </action>
+          
+          <action name="userSearch" method="userSearch" class="adminAction">
+            <result>/admin/SearchUser.jsp</result>
+          </action>
+          
+          <action name="flag" method="flag" class="adminAction">
+            <result>/admin/SearchUser.jsp</result>
+          </action>
+          
+          <action name="getAllNotification" method="getAllNotification" class="adminAction">
+            <result>/admin/gestionNotification.jsp</result>
+          </action>
+          
+           <!-- Graphe des Documents --> 
+          <action name="dateCountCommentaire" method="dateCountCommentaire" class="adminAction">
+            <result>/admin/graph.jsp</result>
+          </action>
+          
+          <action name="documentCount" method="documentCount" class="adminAction">
+            <result>/admin/graph.jsp</result>
+          </action>
+          
+           <action name="imageCount" method="imageCount" class="adminAction">
+            <result>/admin/graph.jsp</result>
+          </action>
+           <!-- Graphe du Forum -->
+          <action name="forumCount" method="forumCount" class="adminAction">
+            <result>/admin/graphForum.jsp</result>
+          </action>
+          <!-- Fichier CVS -->
+           <action name="exportFormatComma" method="exportFormatComma" class="adminAction">
+            <result>/admin/cvsCommaResult.jsp</result>
+          </action>
+          
+          <action name="surveillance" method="surveillance" class="adminAction">
+            <result>/admin/surveillance.jsp</result>
+          </action>
+          <!-- Fin modif -->
+        
+    </package>
+
+
+
+    
+    
+    <package name="login" extends="struts-default">
+        
+        <action name="disconnect" method="disconnect" class="loginAction">
+        	<result>/index.jsp</result>
+        </action>
+		<action name="resetInvalidLogin" method="resetInvalidLogin" class="loginAction">
+			<result>/index.jsp</result>
+		</action>
+    
+		<action name="loginForm" method="execute" class="loginAction">
+             <result>/login/login.jsp</result>
+        </action>
+
+    	<action name="getEspacePerso" method="getEspacePerso" class="userAction">
+    		<result>/user/espacePerso.jsp</result>
+    	</action>
+		<action name="index" method="execute" class="loginAction">
+             <result>/index.jsp</result>
+        </action>
+
+		<action name="login" method="login" class="loginAction">
+            <result name="failed">/index.jsp</result>
+            <result>/index.jsp</result>
+         <!--   <result name="success" type="redirect-action">listContacts.action</result>-->  
+        </action>
+        
+        <action name="addUserForm" method="addUserForm" class="contactAction">
+           <result>/contact/addUser.jsp</result>
+        </action>
+        
+        <action name="addUser" method="addUser" class="contactAction">
+           <result>/index.jsp</result>
+           <!--  <result type="redirect-action">loginForm.action</result>-->
+        </action>
+        
+        
+        <action name="updateUserForm" method="updateUserForm" class="contactAction">
+           <result>/user/updateUser.jsp</result>
+        </action>
+        
+         <action name="updateUser" method="updateUser" class="contactAction">
+           <result type="redirect-action">loginForm.action</result>
+        </action>
+	</package>
+
+</struts>
+

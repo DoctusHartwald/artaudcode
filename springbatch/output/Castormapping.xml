@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns="http://castor.exolab.org/" xmlns:cst="http://castor.exolab.org/">
+    <description xmlns="">Castor generated mapping file</description>
+    <class name="com.batch.model.Ledger">
+        <description xmlns="">Default mapping for class com.batch.model.Ledger</description>
+        <map-to/>
+        <field name="paymentAmount" type="double">
+            <bind-xml name="payment-amount" node="attribute"/>
+        </field>
+        <field name="id" type="int">
+            <bind-xml name="id" node="attribute"/>
+        </field>
+        <field name="depositAmount" type="double">
+            <bind-xml name="deposit-amount" node="attribute"/>
+        </field>
+       <!--  <field name="receiptDate" type="java.util.Date">
+            <bind-xml name="receipt-date" node="element"/>
+        </field> -->
+      
+        
+        <field name="checks" type="com.batch.model.Check">
+			<bind-xml name="receipt-date" node="element"/>
+        </field>
+    </class>
+    <class name="com.batch.model.Check">
+        <description xmlns="">Default mapping for class com.batch.model.Check</description>
+        <map-to/><!--
+        <field name="checkDate" type="java.util.Date">
+            <bind-xml name="check-date" node="element"/>
+        </field>
+        --><field name="checkNumber" type="java.lang.String">
+            <bind-xml name="check-number" node="element"/>
+        </field>
+    </class>
+</mapping>

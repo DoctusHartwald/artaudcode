@@ -1,0 +1,17 @@
+<aspectj>
+<aspects>
+<aspect name="com.springsource.pizzashop.domain.BaseDataOnDemand_Roo_Configurable"/>
+<aspect name="com.springsource.pizzashop.domain.PizzaIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.springsource.pizzashop.domain.PizzaDataOnDemand_Roo_Configurable"/>
+<aspect name="com.springsource.pizzashop.domain.ToppingDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.springsource.pizzashop.domain.ToppingDataOnDemand_Roo_Configurable"/>
+<aspect name="com.springsource.pizzashop.domain.BaseIntegrationTest_Roo_Configurable"/>
+<aspect name="com.springsource.pizzashop.domain.PizzaIntegrationTest_Roo_Configurable"/>
+<aspect name="com.springsource.pizzashop.domain.ToppingIntegrationTest_Roo_Configurable"/>
+<aspect name="com.springsource.pizzashop.domain.BaseIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.springsource.pizzashop.domain.BaseDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.springsource.pizzashop.domain.ToppingIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.springsource.pizzashop.domain.PizzaDataOnDemand_Roo_DataOnDemand"/>
+</aspects>
+</aspectj>
+

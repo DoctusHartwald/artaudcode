@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://www.springframework.org/schema/jms"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+              http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+              http://www.springframework.org/schema/jms
+              http://www.springframework.org/schema/jms/spring-jms-2.5.xsd">
+
+	<!--
+		TODO 05: wire the rewardNetwork in a jms-listener inside a
+		jms-listener-container listener-container with a single nested
+		listener that references the rewardNetwork bean. Configure it to take
+		its input from rewards.queue.dining and send its output to
+		rewards.queue.confirmation.
+		NB : rewardAccountFor inside system-test-config.xml
+	-->
+	<bean id="confirmationReceiveDining" class="rewards.messaging.client.RewardConfirmationLogger" />
+
+	<jms:listener-container connection-factory="connectionFactory">
+		<jms:listener destination="rewards.queue.dining" ref="rewardNetwork" method="rewardAccountFor" response-destination="rewards.queue.confirmation" />
+		<jms:listener destination="rewards.queue.confirmation" ref="confirmationReceiveDining" method="log"/>
+	</jms:listener-container>
+</beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:si="http://www.springframework.org/schema/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/integration
+            http://www.springframework.org/schema/integration/spring-integration-1.0.xsd">
+
+
+	<import
+		resource="classpath:/rewards/messaging/spring-integration-idempotent-receiver-config.xml" />
+
+
+	<si:gateway service-interface="rewards.messaging.DiningProcessor"
+		id="diningProcessor" default-request-channel="dinings"/>
+
+	<bean id="rewardNetwork" factory-method="getMock"
+		class="rewards.messaging.IdempotentRewardNetworkIntegrationTests$RewardNetworkMock" />
+
+	<bean id="rewardRepository" factory-method="mock" class="org.mockito.Mockito">
+		<constructor-arg value="rewards.internal.reward.RewardRepository" />
+	</bean>
+
+</beans>

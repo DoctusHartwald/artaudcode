@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[2.3.2.201003222100-CI-R3751-B687]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[true]]></enableImports>
+	<configs>
+		<config>src/test/resources/rewards/messaging/BatchedDiningSplitterIntegrationTests-context.xml</config>
+		<config>src/test/resources/rewards/messaging/IdempotentRewardNetworkIntegrationTests-context.xml</config>
+		<config>src/test/resources/rewards/messaging/InboundFileDiningIntegrationTests-context.xml</config>
+		<config>src/test/resources/rewards/messaging/MarshallingIntegrationTests-context.xml</config>
+		<config>src/test/resources/rewards/messaging/RewardMessagingIntegrationTests-context.xml</config>
+	</configs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:si="http://www.springframework.org/schema/integration"
+	xmlns:file="http://www.springframework.org/schema/integration/file"
+	xmlns:int-stream="http://www.springframework.org/schema/integration/stream"
+	xsi:schemaLocation="http://www.springframework.org/schema/integration http://www.springframework.org/schema/integration/spring-integration-1.0.xsd
+		http://www.springframework.org/schema/integration/file http://www.springframework.org/schema/integration/file/spring-integration-file-1.0.xsd
+		http://www.springframework.org/schema/integration/stream http://www.springframework.org/schema/integration/stream/spring-integration-stream-1.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<bean id="shouter" class="Shouter" />
+	<!-- Rather than sending the Message to a Message Channel, it would be much cleaner to send a String as a parameter to a simple interface -->
+	<si:gateway id="gateway" service-interface="Gateway" default-request-channel="input"/>
+	
+	<!-- non-buffering channel -->
+	<si:channel id="input" />
+
+	<si:service-activator input-channel="input" output-channel="output" ref="shouter" method="shout" />
+		
+	<!--
+		This defines a Message Channel that is backed by a Java in-memory
+		queue and will hold up to 10 Messages at a time use => queue
+		capacity="10"
+	-->
+	<si:channel id="output" />
+	
+	<file:outbound-channel-adapter  channel="output" directory="./output "/>
+		
+	
+	
+	<si:channel id="inFile"></si:channel>
+	<file:inbound-channel-adapter directory="./output" channel="inFile" filename-pattern=".*\.*" >
+		<si:poller>
+			<si:interval-trigger interval="100"/>
+		</si:poller>
+	</file:inbound-channel-adapter>
+	<file:file-to-string-transformer input-channel="inFile" output-channel="console"/>
+	
+	<int-stream:stdout-channel-adapter id="console" />
+	
+	
+
+</beans>

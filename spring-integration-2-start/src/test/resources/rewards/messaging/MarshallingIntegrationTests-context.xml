@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:si="http://www.springframework.org/schema/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/integration
+            http://www.springframework.org/schema/integration/spring-integration-1.0.xsd">
+
+
+	<import
+		resource="classpath:/rewards/messaging/spring-integration-marshalling-config.xml" />
+
+	<si:gateway service-interface="rewards.messaging.ConfirmationProcessor"
+		id="confirmationProcessor" />
+
+	<si:channel id="dinings">
+		<si:queue capacity="10"/>
+	</si:channel>
+
+	<!-- dining processing normally happens in between these channels -->
+
+	<si:channel id="confirmations" />
+
+</beans>

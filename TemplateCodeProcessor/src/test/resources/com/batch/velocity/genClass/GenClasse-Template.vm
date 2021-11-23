@@ -1,0 +1,41 @@
+
+/**
+*
+*/
+public class $name {
+
+
+#foreach( $element in $mylist )	
+
+	private  $element.Data1Type   $element.champ1;
+	
+	
+	/**
+	 *
+	 * Map : $element.champ1,$element.data1Type,$element.documentation1
+ 	 * To : $element.champ2,$element.data2Type,$element.documentation2 
+	 * $element.documentation1
+	 * @return the $element.champ1
+	 *
+	 */
+	public $element.data1Type get${utility.getInputU($element.champ1)}() {
+		return  $element.champ1;
+	}
+	
+	/**
+	 * Map : $element.champ1,$element.data1Type,$element.documentation1
+ 	 * To : $element.champ2,$element.data2Type,$element.documentation2 
+	 * $element.documentation1
+	 * @param $element.champ1 the $element.champ1 to set
+	 * #set( $setter = "set" )
+	 */
+
+	public void  set${utility.getInputU($element.champ1)}($element.data1Type $element.champ1) {
+		this.$element.champ1 = $element.champ1;
+	}
+	
+#end
+
+}	
+
+ 

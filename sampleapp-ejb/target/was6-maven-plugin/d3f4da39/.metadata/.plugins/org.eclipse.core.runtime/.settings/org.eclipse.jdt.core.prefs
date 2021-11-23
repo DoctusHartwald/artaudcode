@@ -1,0 +1,16 @@
+#Tue Mar 10 16:49:20 CET 2009
+org.eclipse.jdt.core.compiler.debug.localVariable=do not generate
+org.eclipse.jdt.core.classpathVariable.SERVERJDK_SRCROOT=src
+org.eclipse.jdt.core.classpathVariable.SERVERJDK_PLUGINDIR=java
+org.eclipse.jdt.core.compiler.problem.unusedImport=ignore
+org.eclipse.jdt.core.classpathVariable.WAS_V61_IMPL_FACTORY_PROP=c\:/Program Files/IBM/WebSphere/AppServer1/deploytool/itp/plugins/com.ibm.websphere.v61_6.1.0/implfactory.jar
+org.eclipse.jdt.core.compiler.problem.unusedLocal=ignore
+org.eclipse.jdt.core.builder.invalidClasspath=ignore
+org.eclipse.jdt.core.classpathVariable.WAS_50_PLUGINDIR=
+org.eclipse.jdt.core.compiler.debug.sourceFile=do not generate
+org.eclipse.jdt.core.classpathVariable.SERVERJDK_50_PLUGINDIR=java
+org.eclipse.jdt.core.classpathVariable.XERCES_API_JAR=lib/xerces.jar
+org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=*.launch
+eclipse.preferences.version=1
+org.eclipse.jdt.core.compiler.debug.lineNumber=do not generate
+org.eclipse.jdt.core.classpathVariable.WAS_PLUGINDIR=

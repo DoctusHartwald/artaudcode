@@ -1,0 +1,19 @@
+# jwt-auth-policy.yaml
+# Description : authentification du flux ingress de exterieur vers le flux interne du SI
+# ---
+apiVersion: "authentification.istio.io/v1alpha1"
+kind: "Policy"
+metadata:
+ name: "enable-jwt"
+spec:
+ targets:
+ - name: "productpage"
+ peers:
+ - mtls : 
+ origins:
+ - jwt :
+     issuer: "artaud1-jwt@kubernetes.iam.gserviceaccount.com"
+     jwksUri: https://www.googleapis.com/service_accounts/v1/jwk/artaud1@kubernetes.iam.gserviceaccount.com
+     jwtParams:
+     - "jwtToken"
+     principalBinding: USE_ORGIN

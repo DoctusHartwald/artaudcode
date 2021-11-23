@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId">
+    <wb-module deploy-name="sampleapp-ejbEAR">
+        <wb-resource deploy-path="/" source-path="/EarContent"/>
+        <dependent-module deploy-path="/" handle="module:/resource/sampleapp-ejb/sampleapp-ejb">
+            <dependent-object>EjbModule_1236700160359</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

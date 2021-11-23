@@ -1,0 +1,91 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<name>XA Transactions: Lab Solution</name>
+	<groupId>com.springsource.training.module</groupId>
+	<artifactId>tx-xa-1-solution</artifactId>
+	<version>1.1.1.RELEASE</version>
+	<parent>
+		<groupId>com.springsource.training.common</groupId>
+		<artifactId>abstractContainerProject</artifactId>
+		<version>1.1.1.RELEASE</version>
+	</parent>
+	<properties>
+		<activemq.version>5.3.1</activemq.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>com.springsource.training.module</groupId>
+			<artifactId>rewards</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jms</artifactId>
+			<version>${spring.framework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.geronimo.specs</groupId>
+			<artifactId>geronimo-jms_1.1_spec</artifactId>
+			<version>${jms.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-core</artifactId>
+			<version>${activemq.version}</version>
+			<!-- remove exclusion when ActiveMQ upgrades to Spring 3.0.x -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework</groupId>
+					<artifactId>spring-context</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.5.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.derby</groupId>
+			<artifactId>derby</artifactId>
+			<version>10.6.1.0</version>
+		</dependency>
+		<!-- for Atomikos, download the following zip and extract to your local Maven repo: 
+		     http://www.atomikos.com/downloads/transactions-essentials/3.5.4/AtomikosMavenPom-3.5.4.jar -->
+		<dependency>
+			<groupId>com.atomikos</groupId>
+			<artifactId>transactions-jdbc</artifactId>
+			<version>3.5.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.atomikos</groupId>
+			<artifactId>transactions-jms</artifactId>
+			<version>3.5.4</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<!-- required in order to download Sun related jars such as jaxb.
+		For licensing issue, they are not available on the Maven central repository -->
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Maven 2 Repository</name>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+		<repository>
+			<id>com.springsource.training.snapshot</id>
+			<name>SpringSource Training Repository - Snapshots</name>
+			<url>https://tbits.springsource.com/repository/snapshot</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>com.springsource.training.release</id>
+			<name>SpringSource Training Repository - Releases</name>
+			<url>https://tbits.springsource.com/repository/release</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>

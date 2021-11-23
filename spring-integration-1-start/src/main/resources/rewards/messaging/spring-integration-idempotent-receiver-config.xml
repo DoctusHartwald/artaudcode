@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:si="http://www.springframework.org/schema/integration" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/integration
+            http://www.springframework.org/schema/integration/spring-integration-1.0.xsd">
+
+	<si:channel id="dinings" />
+
+	<!-- TODO 02: use a 'chain' here instead of the single 'service-activator' -->
+	<!-- TODO 03: add a preceding service activator referencing alreadyRewardedConfirmer -->
+	<si:service-activator input-channel="dinings" output-channel="confirmations"
+			ref="rewardNetwork" method="rewardAccountFor" />
+
+	<bean id="alreadyRewardedConfirmer" class="rewards.messaging.AlreadyRewardedConfirmer">
+		<constructor-arg ref="rewardRepository" />
+		<constructor-arg ref="confirmationProcessor" />
+	</bean>
+
+	<si:gateway service-interface="rewards.messaging.ConfirmationProcessor"
+		id="confirmationProcessor" default-request-channel="confirmations" />
+
+	<si:channel id="confirmations">
+		<si:queue capacity="10" />
+	</si:channel>
+
+</beans>

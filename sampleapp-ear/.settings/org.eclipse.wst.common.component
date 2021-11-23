@@ -1,0 +1,17 @@
+<project-modules id="moduleCoreId" project-version="1.5.0">
+  <wb-module deploy-name="sampleapp-ear">
+    <wb-resource deploy-path="/" source-path="src/main/application"/>
+    <dependent-module archiveName="commons-lang-2.4.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-lang/commons-lang/2.4/commons-lang-2.4.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="commons-logging-1.0.4.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="sampleapp-ejb.ejb" deploy-path="/" handle="module:/resource/sampleapp-ejb/sampleapp-ejb">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+    <dependent-module archiveName="sampleapp-web.war" deploy-path="/" handle="module:/resource/sampleapp-web/sampleapp-web">
+      <dependency-type>uses</dependency-type>
+    </dependent-module>
+  </wb-module>
+</project-modules>

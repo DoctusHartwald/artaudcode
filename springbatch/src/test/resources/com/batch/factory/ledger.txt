@@ -1,0 +1,5 @@
+02/22/09,Person1,1432,02/22/09,Offertery,$50.00,$0.00,comments
+02/22/09,Person2,900,02/22/09,Offertery,$20.00,$0.00,comments
+02/22/09,Person3,1802,02/14/09,Membership,$800.00,$0.00,comments
+02/22/09,Person4,5281,02/22/09,Membership,$500.00,$0.00,split check
+02/22/09,Person5,5281,02/22/09,Memorial,$50.00,$0.00,"4,split check

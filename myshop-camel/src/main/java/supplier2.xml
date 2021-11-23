@@ -1,0 +1,17 @@
+<products>
+<product>
+<id>1</id>
+<name>iPhone</name>
+<price>500</price>
+</product>
+<product>
+<id>2</id>
+<name>eeePc</name>
+<price>400</price>
+</product>
+<product>
+<id>3</id>
+<name>Wind</name>
+<price>400</price>
+</product>
+</products>
